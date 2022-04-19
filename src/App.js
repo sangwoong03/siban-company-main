@@ -1,7 +1,17 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import "./style.css";
+import Header from "./components/header";
+import Siban from "./components/siban";
+import SibanRouter from "./routes/sibanRouter";
+import ActivityRouter from "./routes/activityRouter";
+import ArtistRouter from "./routes/artistRouter";
+import ConnectionRouter from "./routes/connectionRouter";
+import BoardRouter from "./routes/boardRouter";
+import Home from "./home/home";
+import Footer from "./components/footer";
 
 const GlobalStlye = createGlobalStyle`
   ${reset}
@@ -29,7 +39,16 @@ function App() {
 	return (
 		<>
 			<GlobalStlye />
-			<div> 안녕하세요 </div>
+			<Header />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/siban" element={<SibanRouter />} />
+				<Route path="/activity" element={<ActivityRouter />} />
+				<Route path="/artists" element={<ArtistRouter />} />
+				<Route path="/connection" element={<ConnectionRouter />} />
+				<Route path="/board" element={<BoardRouter />} />
+			</Routes>
+			<Footer />
 		</>
 	);
 }
