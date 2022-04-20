@@ -39,10 +39,17 @@ const SocialLink = styled.ul`
 	margin-top: 25px;
 `;
 const LinkItem = styled.li`
+	display: flex;
+	align-items: center;
 	cursor: pointer;
 	padding: 10px;
+	& > span {
+		margin-right: 5px;
+		font-szie: 1rem;
+	}
 	&:hover {
 		text-decoration: underline;
+		color: rgba(0, 0, 0, 0.5);
 	}
 	:first-child {
 		margin-left: 20px;
@@ -58,13 +65,48 @@ const NavItem = styled.li`
 	font-weight: bold;
 	padding: 30px;
 	width: 20%;
-	transition: 0.3s ease;
 	&:hover {
 		cursor: pointer;
 		text-decoration: underline;
-		font-size: 1.4rem;
+		color: rgba(0, 0, 0, 0.5);
 	}
 `;
+
+const socialLinkItems = [
+	{
+		name: "Youtube",
+		url: "https://www.youtube.com/channel/UCLXAm23QnEYE_WNyjUK3qyQ/about",
+		img: "youtube",
+	},
+	{
+		name: "Instagram",
+		url: "https://instagram.com/siban.company?utm_medium=copy_link",
+		img: "instagram",
+	},
+];
+
+const navRouterItems = [
+	{
+		name: "SIBAN",
+		url: "/siban",
+	},
+	{
+		name: "ACTIVITY",
+		url: "/activity",
+	},
+	{
+		name: "ARTISTS",
+		url: "/artists",
+	},
+	{
+		name: "CONNECTION",
+		url: "/connection",
+	},
+	{
+		name: "BOARD",
+		url: "/board",
+	},
+];
 
 function Header() {
 	return (
@@ -76,27 +118,24 @@ function Header() {
 					</Link>
 				</LogoBox>
 				<MenuNav>
-					{/* image 추가 */}
 					<SocialLink>
-						<LinkItem> Instagram </LinkItem>
-						<LinkItem> Youtube </LinkItem>
+						{socialLinkItems.map((item, index) => (
+							<LinkItem ket={index}>
+								<span>
+									<i class={`ri-${item.img}-line`}></i>
+								</span>
+								<a href={item.url} target="_blank" rel="noreferre noreferrer">
+									{item.name}
+								</a>
+							</LinkItem>
+						))}
 					</SocialLink>
 					<NavGroup>
-						<NavItem>
-							<Link to="/siban"> SIBAN </Link>
-						</NavItem>
-						<NavItem>
-							<Link to="/activity"> ACTIVITY </Link>
-						</NavItem>
-						<NavItem>
-							<Link to="/artists"> ARTISTS </Link>
-						</NavItem>
-						<NavItem>
-							<Link to="/connection"> CONNECTION </Link>
-						</NavItem>
-						<NavItem>
-							<Link to="/board"> BOARD </Link>
-						</NavItem>
+						{navRouterItems.map((item, index) => (
+							<NavItem key={index}>
+								<Link to={item.url}>{item.name}</Link>
+							</NavItem>
+						))}
 					</NavGroup>
 				</MenuNav>
 			</Inner>
