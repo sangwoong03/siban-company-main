@@ -120,7 +120,7 @@ function Header() {
 				<MenuNav>
 					<SocialLink>
 						{socialLinkItems.map((item, index) => (
-							<LinkItem ket={index}>
+							<LinkItem key={index}>
 								<span>
 									<i class={`ri-${item.img}-line`}></i>
 								</span>
