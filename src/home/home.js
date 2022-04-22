@@ -3,6 +3,8 @@ import Acitvity from "../components/activiti";
 import Artist from "../components/artists";
 import Siban from "../components/siban";
 import Location from "../components/location";
+import Intro from "../components/introduce";
+import SideButton from "../components/button/sideBtn";
 
 function Home() {
 	return (
@@ -10,7 +12,9 @@ function Home() {
 			<Siban />
 			<Artist />
 			<Acitvity />
+			<Intro />
 			<Location />
+			<SideButton />
 		</Fragment>
 	);
 }
