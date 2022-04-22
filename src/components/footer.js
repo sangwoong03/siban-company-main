@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const footerLogo = "../assets/footer_logo.jpg";
+const footerLogo = "../assets/main_logo_black.jpg";
 const FooterSection = styled.footer`
 	height: 200px;
 	background: #000;
@@ -16,15 +16,15 @@ const Inner = styled.div`
 	align-items: center;
 `;
 const LogoBox = styled.div`
-	width: 200px;
+	width: 250px;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 `;
 const Logo = styled.img`
-	width: 80%;
-	height: 80%;
+	width: 200px;
+	height: 200px;
 	margin: 0 auto;
 `;
 const LinkBox = styled.div`
@@ -50,14 +50,14 @@ const LinkBox = styled.div`
 	}
 `;
 const InfoBox = styled.div`
-	width: 300px;
+	width: 250px;
 	height: 80%;
 	display: flex;
 	align-items: center;
-	font-size: 1rem;
+	font-size: 1em;
 	& > ul:first-child {
 		text-align: end;
-		margin-right: 10px;
+		margin-right: 15px;
 	}
 	& > ul:last-child {
 		text-align: start;
@@ -80,9 +80,9 @@ const LinkList = [
 	},
 ];
 const inforList = {
-	tel: "010-6354-9756",
+	Tel: "010-6354-9756",
 	Email: "cyg110@naver.com",
-	Adr: "경기도 수원시 고색동 49-20 4층",
+	Adr: "수원시 매송고색로 716 4층",
 	Corp_No: "343-31-01201",
 };
 let infoKey = [];
