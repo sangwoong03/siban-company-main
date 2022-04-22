@@ -14,7 +14,11 @@
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo_black_icon.ico" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-   
+    <script type="text/javascript">
+      document.oncontextmenu = () => {return false};
+      document.onselectstart = () => {return false};
+    </script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=176c0cfbdf25dc2ec6f38fc10dc1e587"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
