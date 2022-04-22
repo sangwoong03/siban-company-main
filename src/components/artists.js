@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import SlideBtn from "./button/slideBtn";
 
 const HomeArtist = styled.section`
 	padding: 100px 0;
@@ -69,28 +70,6 @@ const ProfileTiles = styled.li`
 		}
 	}
 `;
-const ButtonGroup = styled.div`
-	max-width: 1200px;
-	display: flex;
-	justify-content: space-betweeen;
-`;
-const MoveBtn = styled.button`
-	border: none;
-	outline: none;
-	cursor: pointer;
-	padding: 10px;
-	font-size: 2rem;
-	font-weight: bold;
-	background: none;
-	position: absolute;
-	top: 50%;
-	&:first-child {
-		left: 0;
-	}
-	&:last-child {
-		right: 0;
-	}
-`;
 
 const artistProfile = [
 	{
@@ -129,7 +108,7 @@ function Artist() {
 		<HomeArtist>
 			<Inner>
 				<TitleBox>
-					<h1> 아티스트 </h1>
+					<h1> [시:반] 아티스트 </h1>
 					<p>
 						<Link to="/artists">자세히 보기</Link>
 					</p>
@@ -153,14 +132,7 @@ function Artist() {
 						</ProfileSlide>
 					</ProfileWrapper>
 				</ArtistBox>
-				<ButtonGroup>
-					<MoveBtn onClick={console.log("click")}>
-						<i class="ri-arrow-left-s-line"></i>
-					</MoveBtn>
-					<MoveBtn>
-						<i class="ri-arrow-right-s-line"></i>
-					</MoveBtn>
-				</ButtonGroup>
+				<SlideBtn />
 			</Inner>
 		</HomeArtist>
 	);
