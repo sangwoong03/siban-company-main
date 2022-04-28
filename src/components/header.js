@@ -122,7 +122,7 @@ function Header() {
 						{socialLinkItems.map((item, index) => (
 							<LinkItem key={index}>
 								<span>
-									<i class={`ri-${item.img}-line`}></i>
+									<i className={`ri-${item.img}-line`}></i>
 								</span>
 								<a href={item.url} target="_blank" rel="noreferre noreferrer">
 									{item.name}
