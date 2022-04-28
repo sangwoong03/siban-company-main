@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import Acitvity from "../components/activiti";
 import Artist from "../components/artists";
 import Siban from "../components/siban";
-import Location from "../components/location";
+import LocationSiban from "../components/locationSiban";
 import Intro from "../components/introduce";
 import SideButton from "../components/button/sideBtn";
 
@@ -13,7 +13,7 @@ function Home() {
 			<Artist />
 			<Acitvity />
 			<Intro />
-			<Location />
+			<LocationSiban />
 			<SideButton />
 		</Fragment>
 	);
