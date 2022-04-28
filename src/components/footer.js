@@ -46,7 +46,7 @@ const LinkBox = styled.div`
 		margin: 0 10px;
 	}
 	& > ul > li:hover {
-		color: rgba(0, 0, 0, 0.3);
+		color: rgba(255, 255, 255, 0.7);
 	}
 `;
 const InfoBox = styled.div`
@@ -103,7 +103,7 @@ function Footer() {
 							<li key={index}>
 								<a href={item.url} target="_blank" rel="noreferrer">
 									<span>
-										<i class={`ri-${item.img}-line`}></i>
+										<i className={`ri-${item.img}-line`}></i>
 									</span>
 								</a>
 							</li>
