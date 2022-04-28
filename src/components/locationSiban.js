@@ -7,6 +7,7 @@ import {
 	faPeopleGroup,
 	faCalendar,
 } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const { kakao } = window;
 
@@ -143,7 +144,7 @@ const MapInfo = styled.div`
 	}
 `;
 
-function Location() {
+function LocationSiban() {
 	const kakaoMap = () => {
 		const sibanLocation = document.querySelector("#map");
 		const options = {
@@ -168,7 +169,7 @@ function Location() {
 		<HomeLocation>
 			<Inner>
 				<TitleBox>
-					<h1> [시:반] 찾아오시는 길 </h1>
+					<h1> [시:반] 오시는 길 </h1>
 					<Link to="/connection">
 						<p>자세히 보기</p>
 					</Link>
@@ -201,13 +202,13 @@ function Location() {
 						<div id="detail-wrapper">
 							<ul>
 								<li>
-									<i class="ri-map-pin-line"></i> 오시는 길
+									<i className="ri-map-pin-line"></i> 오시는 길
 								</li>
 								<li>
-									<i class="ri-question-line"></i> 문의하기
+									<i className="ri-question-line"></i> 문의하기
 								</li>
 								<li>
-									<i class="ri-error-warning-line"></i> 이용안내
+									<i className="ri-error-warning-line"></i> 이용안내
 								</li>
 							</ul>
 							<ul>
@@ -220,6 +221,7 @@ function Location() {
 									<a href="tel:010-6454-9756"> 010-6454-9756 </a>
 									<a href="mailto:cyg110@naver.com"> cyg110@naver.com </a>
 								</li>
+								{/* ul태그 > id 추가 or 다른 styled tag로 교체 */}
 								<li>
 									<li>
 										<FontAwesomeIcon
@@ -263,4 +265,4 @@ function Location() {
 	);
 }
 
-export default Location;
+export default LocationSiban;
