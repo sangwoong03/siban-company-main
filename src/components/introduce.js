@@ -62,7 +62,7 @@ function Intro() {
 							width="640"
 							hegiht="360"
 							src="https://www.youtube.com/embed/qrNDKumU_tI"
-							frameborder="0"
+							frameBorder="0"
 						></iframe>
 					</VideoRatio>
 				</VideoBox>
