@@ -29,10 +29,10 @@ function SlideBtn({ children, ...rest }) {
 	return (
 		<ButtonGroup>
 			<MoveBtn {...rest}>
-				<i class="ri-arrow-left-s-line"></i>
+				<i className="ri-arrow-left-s-line"></i>
 			</MoveBtn>
 			<MoveBtn {...rest}>
-				<i class="ri-arrow-right-s-line"></i>
+				<i className="ri-arrow-right-s-line"></i>
 			</MoveBtn>
 		</ButtonGroup>
 	);
