@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Acitvity from "../components/activiti";
+import Activity from "../components/activiti";
 import Artist from "../components/artists";
 import Siban from "../components/siban";
 import LocationSiban from "../components/locationSiban";
@@ -11,7 +11,7 @@ function Home() {
 		<Fragment>
 			<Siban />
 			<Artist />
-			<Acitvity />
+			<Activity />
 			<Intro />
 			<LocationSiban />
 			<SideButton />
