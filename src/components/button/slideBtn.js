@@ -22,17 +22,17 @@ const MoveBtn = styled.button`
 	&:last-child {
 		right: 0;
 	}
-	color: ${(props) => props.color || "black"};
+	// color: ${(props) => props.color || "black"};
 `;
 
 function SlideBtn({ children, ...rest }) {
 	return (
 		<ButtonGroup>
 			<MoveBtn {...rest}>
-				<i className="ri-arrow-left-s-line"></i>
+				<i id="left-btn" className="ri-arrow-left-s-line"></i>
 			</MoveBtn>
 			<MoveBtn {...rest}>
-				<i className="ri-arrow-right-s-line"></i>
+				<i id="right-btn" className="ri-arrow-right-s-line"></i>
 			</MoveBtn>
 		</ButtonGroup>
 	);
