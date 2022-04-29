@@ -8,7 +8,7 @@ import Siban from "./components/siban";
 import SibanRouter from "./routes/sibanRouter";
 import ActivityRouter from "./routes/activityRouter";
 import ArtistRouter from "./routes/artistRouter";
-import ConnectionRouter from "./routes/connectionRouter";
+import LocationSibanRouter from "./routes/locationSibanRouter";
 import BoardRouter from "./routes/boardRouter";
 import Home from "./home/home";
 import Footer from "./components/footer";
@@ -45,7 +45,7 @@ function App() {
 				<Route path="/siban" element={<SibanRouter />} />
 				<Route path="/activity" element={<ActivityRouter />} />
 				<Route path="/artists" element={<ArtistRouter />} />
-				<Route path="/connection" element={<ConnectionRouter />} />
+				<Route path="/location" element={<LocationSibanRouter />} />
 				<Route path="/board" element={<BoardRouter />} />
 			</Routes>
 			<Footer />
