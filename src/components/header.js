@@ -99,8 +99,8 @@ const navRouterItems = [
 		url: "/artists",
 	},
 	{
-		name: "CONNECTION",
-		url: "/connection",
+		name: "LOCATION",
+		url: "/location",
 	},
 	{
 		name: "BOARD",
