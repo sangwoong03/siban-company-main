@@ -7,7 +7,6 @@ import {
 	faPeopleGroup,
 	faCalendar,
 } from "@fortawesome/free-solid-svg-icons";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const { kakao } = window;
 
@@ -170,7 +169,14 @@ function LocationSiban() {
 			<Inner>
 				<TitleBox>
 					<h1> [시:반] 오시는 길 </h1>
-					<Link to="/connection">
+					<Link
+						to="/location"
+						style={
+							window.location.pathname === "/location"
+								? { display: "none" }
+								: { display: "block" }
+						}
+					>
 						<p>자세히 보기</p>
 					</Link>
 				</TitleBox>
