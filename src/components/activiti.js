@@ -5,8 +5,6 @@ import SlideBtn from "./button/slideBtn";
 
 const HomeActivity = styled.section`
 	padding: 100px 0;
-	background: #000000;
-	color: #ffffff;
 	text-align: center;
 `;
 const Inner = styled.div`
@@ -25,9 +23,6 @@ const TitleBox = styled.div`
 	border-bottom: 1px solid #2b2b2b;
 	& > h1 {
 		font-size: 2.5rem;
-	}
-	& > p {
-		color: #fff;
 	}
 `;
 const AcitvityBox = styled.div`
@@ -100,7 +95,7 @@ const activityItems = [
 		schedule: false,
 	},
 ];
-function Acitvity() {
+function Activity() {
 	return (
 		<HomeActivity>
 			<Inner>
@@ -130,4 +125,4 @@ function Acitvity() {
 	);
 }
 
-export default Acitvity;
+export default Activity;
