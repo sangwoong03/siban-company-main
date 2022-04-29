@@ -42,6 +42,9 @@ const ProfileWrapper = styled.div`
 `;
 const ProfileSlide = styled.ul`
 	width: 1980px;
+	position: abosolute;
+	top: 0;
+	left: 0;
 	display: flex;
 	align-items: center;
 `;
@@ -103,6 +106,7 @@ const artistProfile = [
 		instaAc: "swimee",
 	},
 ];
+
 function Artist() {
 	return (
 		<HomeArtist>
@@ -115,7 +119,7 @@ function Artist() {
 				</TitleBox>
 				<ArtistBox>
 					<ProfileWrapper>
-						<ProfileSlide>
+						<ProfileSlide className="slide--wrapper">
 							{artistProfile.map((item, index) => (
 								<ProfileTiles key={index}>
 									<div>
@@ -132,7 +136,18 @@ function Artist() {
 						</ProfileSlide>
 					</ProfileWrapper>
 				</ArtistBox>
-				<SlideBtn />
+				<SlideBtn
+					onClick={(e) => {
+						if (e.target.id === "left-btn") {
+							const ul = document.querySelector(".slide--wrapper");
+							for (let i = 1; i <= artistProfile.length - 3; i++) {
+								ul.style.transform = `translateX(-320px)`; // 여기서 봐야됨
+							}
+						} else if (e.target.id === "right-btn") {
+							console.log("right");
+						}
+					}}
+				/>
 			</Inner>
 		</HomeArtist>
 	);
