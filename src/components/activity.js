@@ -41,25 +41,32 @@ const ActivitySlide = styled.ul`
 	width: 1980px;
 	display: flex;
 	align-items: center;
+	transition: 0.7s ease;
 `;
 const ActivityTiles = styled.li`
 	width: 300px;
 	height: 360px;
-	& > div,
+	margin-bottom: 10px;
+	& div,
 	img {
 		width: 100%;
 		height: 100%;
+		margin-bottom: 20px;
 	}
 	& > div > img {
 		background-size: cover;
-		cursor: pointer;
 	}
 	:not(last-child) {
 		margin-right: 20px;
 	}
-	& p {
+	& h2 {
 		font-size: 1.2rem;
+		font-weight: bold;
 		margin: 10px 0;
+	}
+	& p:first-child {
+		font-size: 1rem;
+		padding: 10px 0;
 	}
 	& a {
 		font-size: 1rem;
@@ -72,30 +79,40 @@ const ActivityTiles = styled.li`
 const activityItems = [
 	{
 		title: "그대 내곁에 (강릉)",
-		des: "",
-		src: "../assets/act_1.jpg",
+		brief: "2022년 5월 14일 ~ (예정)",
+		src: "../assets/siban_activity_Gangneung.jpg",
 		schedule: true,
 	},
 	{
 		title: "그대 내곁에 (서울)",
-		des: "",
+		brief: "2021년 12월 21일 ~ 26일 (완)",
 		src: "../assets/act_1.jpg",
 		schedule: false,
 	},
 	{
 		title: "끝맺음 (prod. 임석원) - 김홍준",
-		des: "",
+		brief: "뮤직비디오 (완)",
 		src: "../assets/act_2.jpg",
-		schedule: true,
+		schedule: false,
 	},
 	{
 		title: "월드 2인극 페스티벌",
-		des: "",
+		brief: "2인극 (완)",
 		src: "../assets/act_3.gif",
 		schedule: false,
 	},
 ];
 function Activity() {
+	function slideBtn(e) {
+		const id = e.target.id;
+		const ul = document.querySelector(".slide--wrapper--activities");
+
+		if (id === "left-btn") {
+			ul.style.transform = `translateX(0)`;
+		} else if (id === "right-btn") {
+			ul.style.transform = `translateX(-960px)`;
+		}
+	}
 	return (
 		<HomeActivity>
 			<Inner>
@@ -107,19 +124,29 @@ function Activity() {
 				</TitleBox>
 				<AcitvityBox>
 					<ActivityWrapper>
-						<ActivitySlide>
+						<ActivitySlide className="slide--wrapper--activities">
 							{activityItems.map((item, index) => (
 								<ActivityTiles key={index}>
 									<div>
+										<p
+											style={
+												item.schedule
+													? { fontWeight: "bold" }
+													: { fontWeight: "regular", color: "#b2b2b2" }
+											}
+										>
+											{" "}
+											{item.brief}{" "}
+										</p>
 										<img src={item.src} alt={item.title} title="이동" />
-										<p> {item.title} </p>
+										<h2> {item.title} </h2>
 									</div>
 								</ActivityTiles>
 							))}
 						</ActivitySlide>
 					</ActivityWrapper>
 				</AcitvityBox>
-				<SlideBtn color="white" />
+				<SlideBtn onClick={slideBtn} />
 			</Inner>
 		</HomeActivity>
 	);
