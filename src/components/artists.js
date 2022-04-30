@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import SlideBtn from "./button/slideBtn";
@@ -44,9 +44,10 @@ const ProfileSlide = styled.ul`
 	width: 1980px;
 	position: abosolute;
 	top: 0;
-	left: 0;
+	left: 320px;
 	display: flex;
 	align-items: center;
+	transition: 0.7s ease;
 `;
 const ProfileTiles = styled.li`
 	width: 300px;
@@ -108,6 +109,16 @@ const artistProfile = [
 ];
 
 function Artist() {
+	function slideBtn(e) {
+		const id = e.target.id;
+		const ul = document.querySelector(".slide--wrapper");
+
+		if (id === "left-btn") {
+			ul.style.transform = `translateX(0)`;
+		} else if (id === "right-btn") {
+			ul.style.transform = `translateX(-960px)`;
+		}
+	}
 	return (
 		<HomeArtist>
 			<Inner>
@@ -137,16 +148,16 @@ function Artist() {
 					</ProfileWrapper>
 				</ArtistBox>
 				<SlideBtn
-					onClick={(e) => {
-						if (e.target.id === "left-btn") {
-							const ul = document.querySelector(".slide--wrapper");
-							for (let i = 1; i <= artistProfile.length - 3; i++) {
-								ul.style.transform = `translateX(-320px)`; // 여기서 봐야됨
-							}
-						} else if (e.target.id === "right-btn") {
-							console.log("right");
-						}
-					}}
+					onClick={slideBtn}
+					// (e) => {
+					// if (e.target.id === "left-btn") {
+					// 	const ul = document.querySelector(".slide--wrapper");
+					// 	for (let i = 1; i <= artistProfile.length - 3; i++) {
+					// 		ul.style.transform = `translateX(-320px)`; // 여기서 봐야됨
+					// 	}
+					// } else if (e.target.id === "right-btn") {
+					// 	console.log("right");
+					// }
 				/>
 			</Inner>
 		</HomeArtist>
