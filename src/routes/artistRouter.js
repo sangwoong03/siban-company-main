@@ -36,27 +36,36 @@ const SideNav = styled.div`
 const MainSection = styled.section`
 	width: 100%;
 	height: 100%;
-	background: green;
+	padding: 50px;
+	display: flex;
+	& > div:first-child {
+		width: 450px;
+		margin-right: 50px;
+	}
+	& > div:last-child {
+		display: flex;
+		font-size: 1.3rem;
+	}
+	& > div:last-child > ul:first-child li {
+		text-align: end;
+		font-weight: bold;
+		margin-right: 15px;
+		margin-bottom: 15px;
+	}
+	& > div:last-child > ul:last-child li {
+		margin-bottom: 15px;
+	}
 `;
 
 const artistInfo = [
 	{
-		title: "",
-		name: "",
-		age: "",
-		where: "",
-		desc: "",
-		projects: "",
-		url: "",
-	},
-	{
-		title: "",
-		name: "",
-		age: "",
-		where: "",
-		desc: "",
-		projects: "",
-		url: "",
+		이름: "최영광",
+		나이: "27세 (만 25세)",
+		이메일: "cyg110@naver.com",
+		사는곳: "경기도 오산시",
+		비전: "",
+		출연작품: "",
+		src: "",
 	},
 ];
 function ArtistRouter() {
@@ -74,7 +83,40 @@ function ArtistRouter() {
 						<li> 윤수영 </li>
 					</ul>
 				</SideNav>
-				<MainSection></MainSection>
+				<MainSection>
+					{/* 슬라이드 들어가야 됨 */}
+					<div>
+						<img src="../assets/younggwang_main.jpg" alt="사진" />
+					</div>
+					<div>
+						<ul>
+							<li> 이름: </li>
+							<li> 나이: </li>
+							<li> 사는곳: </li>
+							<li> 이메일: </li>
+							<li> 작품활동 </li>
+							<li> [연극] </li>
+							<li style={{ marginTop: "159px" }}> [뮤지컬] </li>
+							<li> [단편영화] </li>
+							<li> [M/V] </li>
+						</ul>
+						<ul>
+							<li> 최영광 </li>
+							<li> 27세 (만 25세) </li>
+							<li> 경기도 오산시 </li>
+							<li> cyg110@naver.com </li>
+							<li> &nbsp; </li>
+							<li> 그대 내 곁에 - 김차사 역</li>
+							<li> 더 앵글러 - 최진서 역 </li>
+							<li> 마리보의 연인들 - 블레즈 역</li>
+							<li> 문 - 김과장 역</li>
+							<li> 창고에서 - 덕배 역</li>
+							<li> 난리부르스 - 수혁 역 </li>
+							<li> 새로고침 - 우진 역 </li>
+							<li> 끝맺음(prod.임석원) </li>
+						</ul>
+					</div>
+				</MainSection>
 			</ArtistsWrapper>
 		</>
 	);
