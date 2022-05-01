@@ -42,7 +42,6 @@ const LinkItem = styled.li`
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	padding: 10px;
 	& > span {
 		margin-right: 5px;
 		font-szie: 1rem;
@@ -51,24 +50,30 @@ const LinkItem = styled.li`
 		text-decoration: underline;
 		color: rgba(0, 0, 0, 0.5);
 	}
+	& a {
+		padding: 10px;
+	}
 	:first-child {
 		margin-left: 20px;
 	}
 `;
 const NavGroup = styled.ul`
 	display: flex;
+	justify-content: space-around;
 	margin-top: 50px;
 `;
 const NavItem = styled.li`
-	margin-right: 10px;
 	font-size: 1.2rem;
 	font-weight: bold;
-	padding: 30px;
+	margin-top: 30px;
 	width: 20%;
 	&:hover {
 		cursor: pointer;
 		text-decoration: underline;
 		color: rgba(0, 0, 0, 0.5);
+	}
+	& a {
+		padding: 20px;
 	}
 `;
 
