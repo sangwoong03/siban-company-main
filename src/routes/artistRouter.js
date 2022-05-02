@@ -38,83 +38,220 @@ const MainSection = styled.section`
 	height: 100%;
 	padding: 50px;
 	display: flex;
-	& > div:first-child {
+	overflow: scroll;
+	& > .image-box {
 		width: 450px;
 		margin-right: 50px;
 	}
-	& > div:last-child {
+	& > .image-box > img {
+		width: 450px;
+	}
+	& > .introduction-box {
 		display: flex;
 		font-size: 1.3rem;
 	}
-	& > div:last-child > ul:first-child li {
+	& > .introduction-box .left-side {
+		width: 300px;
+		height: inherit;
+	}
+	& > .introduction-box > .left-side > ul > li {
 		text-align: end;
 		font-weight: bold;
 		margin-right: 15px;
 		margin-bottom: 15px;
 	}
-	& > div:last-child > ul:last-child li {
+	& > .introduction-box > .right-side > ul:last-child li {
 		margin-bottom: 15px;
 	}
 `;
+
+const artistImages = [
+	{
+		src: ["../assets/younggwang_main.jpg"],
+	},
+	{
+		src: ["../assets/rakoon_main.jpg"],
+	},
+	{
+		src: ["../assets/manjoong_main.jpg"],
+	},
+	{
+		src: ["../assets/younhwa_main.jpg"],
+	},
+	{
+		src: ["../assets/jaehun_main.jpg"],
+	},
+	{
+		src: ["../assets/suyoung_main.jpg"],
+	},
+];
 
 const artistInfo = [
 	{
 		이름: "최영광",
 		나이: "27세 (만 25세)",
 		이메일: "cyg110@naver.com",
-		사는곳: "경기도 오산시",
-		비전: "",
-		출연작품: "",
-		src: "",
+		"사는 곳": "경기도 오산시",
+		작품활동: "-",
+		"[연극]": [
+			"그대 내 곁에 - 김차사 역",
+			"더 앵글러 - 최진서 역",
+			"마리보의 연인들 - 블레즈 역",
+			"문 - 김과장 역",
+			"창고에서 - 덕배 역",
+		],
+		"[뮤지컬]": "난리부르스 - 수혁 역",
+		"[단편영화]": "새로고침 - 우진 역",
+		"[M/V]": "끝맺음(prod.임석원)",
+	},
+	{
+		이름: "신락훈",
+		나이: "27세 (만 25세)",
+		이메일: "cyg110@naver.com",
+		"사는 곳": "경기도 오산시",
+		작품활동: "-",
+		"[연극]": [
+			"그대 내 곁에 - 김차사 역",
+			"더 앵글러 - 최진서 역",
+			"마리보의 연인들 - 블레즈 역",
+			"문 - 김과장 역",
+			"창고에서 - 덕배 역",
+		],
+		"[뮤지컬]": "난리부르스 - 수혁 역",
+		"[단편영화]": "새로고침 - 우진 역",
+		"[M/V]": "끝맺음(prod.임석원)",
+	},
+	{
+		이름: "김만중",
+		나이: "27세 (만 25세)",
+		이메일: "cyg110@naver.com",
+		"사는 곳": "경기도 오산시",
+		작품활동: "-",
+		"[연극]": [
+			"그대 내 곁에 - 김차사 역",
+			"더 앵글러 - 최진서 역",
+			"마리보의 연인들 - 블레즈 역",
+			"문 - 김과장 역",
+			"창고에서 - 덕배 역",
+		],
+		"[뮤지컬]": "난리부르스 - 수혁 역",
+		"[단편영화]": "새로고침 - 우진 역",
+		"[M/V]": "끝맺음(prod.임석원)",
+	},
+	{
+		이름: "홍윤화",
+		나이: "27세 (만 25세)",
+		이메일: "cyg110@naver.com",
+		"사는 곳": "경기도 오산시",
+		작품활동: "-",
+		"[연극]": [
+			"그대 내 곁에 - 김차사 역",
+			"더 앵글러 - 최진서 역",
+			"마리보의 연인들 - 블레즈 역",
+			"문 - 김과장 역",
+			"창고에서 - 덕배 역",
+		],
+		"[뮤지컬]": "난리부르스 - 수혁 역",
+		"[단편영화]": "새로고침 - 우진 역",
+		"[M/V]": "끝맺음(prod.임석원)",
+	},
+	{
+		이름: "정재헌",
+		나이: "27세 (만 25세)",
+		이메일: "cyg110@naver.com",
+		"사는 곳": "경기도 오산시",
+		작품활동: "-",
+		"[연극]": [
+			"그대 내 곁에 - 김차사 역",
+			"더 앵글러 - 최진서 역",
+			"마리보의 연인들 - 블레즈 역",
+			"문 - 김과장 역",
+			"창고에서 - 덕배 역",
+		],
+		"[뮤지컬]": "난리부르스 - 수혁 역",
+		"[단편영화]": "새로고침 - 우진 역",
+		"[M/V]": "끝맺음(prod.임석원)",
+	},
+	{
+		이름: "윤수영",
+		나이: "27세 (만 25세)",
+		이메일: "cyg110@naver.com",
+		"사는 곳": "경기도 오산시",
+		작품활동: "-",
+		"[연극]": [
+			"그대 내 곁에 - 김차사 역",
+			"더 앵글러 - 최진서 역",
+			"마리보의 연인들 - 블레즈 역",
+			"문 - 김과장 역",
+			"창고에서 - 덕배 역",
+		],
+		"[뮤지컬]": "난리부르스 - 수혁 역",
+		"[단편영화]": "새로고침 - 우진 역",
+		"[M/V]": "끝맺음(prod.임석원)",
 	},
 ];
+
 function ArtistRouter() {
+	let artistInfoKey = [];
+	let artistInforValue = [];
+	for (let i = 0; i < artistInfo.length; i++) {
+		Object.keys(artistInfo[i]).forEach((key) => artistInfoKey.push(key));
+	}
+	for (let i = 0; i < artistInfo.length; i++) {
+		Object.keys(artistInfo[i]).forEach((key) =>
+			artistInforValue.push(artistInfo[i][key]),
+		);
+	}
+
 	return (
 		<>
 			<ArtistsHeader>[시: 반] 아티스트</ArtistsHeader>
 			<ArtistsWrapper>
 				<SideNav>
 					<ul>
-						<li> 최영광 </li>
-						<li> 신락훈 </li>
-						<li> 홍윤화 </li>
-						<li> 김만중 </li>
-						<li> 정재헌 </li>
-						<li> 윤수영 </li>
+						{artistInfo.map((item, index) => (
+							<li key={index}> {item.이름} </li>
+						))}
 					</ul>
 				</SideNav>
 				<MainSection>
-					{/* 슬라이드 들어가야 됨 */}
-					<div>
-						<img src="../assets/younggwang_main.jpg" alt="사진" />
+					<div className="image-box">
+						{artistImages.map((item, index) => (
+							<img src={item.src} alt="artist-profile" key={index} style={{}} />
+						))}
 					</div>
-					<div>
-						<ul>
-							<li> 이름: </li>
-							<li> 나이: </li>
-							<li> 사는곳: </li>
-							<li> 이메일: </li>
-							<li> 작품활동 </li>
-							<li> [연극] </li>
-							<li style={{ marginTop: "159px" }}> [뮤지컬] </li>
-							<li> [단편영화] </li>
-							<li> [M/V] </li>
-						</ul>
-						<ul>
-							<li> 최영광 </li>
-							<li> 27세 (만 25세) </li>
-							<li> 경기도 오산시 </li>
-							<li> cyg110@naver.com </li>
-							<li> &nbsp; </li>
-							<li> 그대 내 곁에 - 김차사 역</li>
-							<li> 더 앵글러 - 최진서 역 </li>
-							<li> 마리보의 연인들 - 블레즈 역</li>
-							<li> 문 - 김과장 역</li>
-							<li> 창고에서 - 덕배 역</li>
-							<li> 난리부르스 - 수혁 역 </li>
-							<li> 새로고침 - 우진 역 </li>
-							<li> 끝맺음(prod.임석원) </li>
-						</ul>
+					<div className="introduction-box">
+						<div className="left-side">
+							<ul>
+								{artistInfoKey.map((item, index) => (
+									<li
+										style={
+											index === 5
+												? { marginBottom: "160px" }
+												: { marginBottom: "15px" }
+										}
+									>
+										{" "}
+										{item}{" "}
+									</li>
+								))}
+							</ul>
+						</div>
+						<div className="right-side">
+							<ul>
+								{artistInforValue.map((item, index) => (
+									<li key={index}>
+										{index === 5 ? (
+											artistInforValue[5].map((item, index) => (
+												<li key={index}> {item} </li>
+											))
+										) : (
+											<li> {item} </li>
+										)}
+									</li>
+								))}
+							</ul>
+						</div>
 					</div>
 				</MainSection>
 			</ArtistsWrapper>
