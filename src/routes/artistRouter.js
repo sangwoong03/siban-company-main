@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ArtistMainSection from "./artistSection";
 
 const ArtistsHeader = styled.header`
-	margin: 0 auto 0 auto;
+	margin: 0 auto 20px auto;
 	padding: 100px 0 0 0;
 	border-bottom: 1px solid #e5e5e5;
 	max-width: 860px;
