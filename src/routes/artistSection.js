@@ -18,7 +18,7 @@ const SideNav = styled.div`
 	}
 `;
 const ProfileWrapper = styled.section`
-	max-width: 1200px;
+	width: 1200px;
 	height: 600px;
 	overflow: hidden;
 `;
