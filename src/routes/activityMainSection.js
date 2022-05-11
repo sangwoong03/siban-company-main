@@ -1,23 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const SideNav = styled.div`
-	width: 200px;
-	height: 100%;
-	text-align: center;
-	background: rgba(0, 0, 0, 0.05);
-	& > ul > li {
-		font-size: 1.1rem;
-		font-weight: bold;
-		margin: 50px 0;
-		cursor: pointer;
-	}
-	& > ul > li:hover {
-		color: rgba(0, 0, 0, 0.4);
-		text-decoration: underline;
-	}
-`;
-
 const BasicInfo = styled.div`
 	margin-top: 50px;
 	width: 100%;
@@ -137,14 +120,6 @@ function ActivityMainSection() {
 	`;
 	return (
 		<>
-			<SideNav>
-				<ul>
-					<li> 공연 </li>
-					<li> 영상 </li>
-					<li> 레슨 </li>
-					<li> 일상 </li>
-				</ul>
-			</SideNav>
 			<MainSection className="activitiy--main--section">
 				<BasicInfo>
 					<PosterBox>
