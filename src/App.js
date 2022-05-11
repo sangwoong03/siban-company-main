@@ -4,7 +4,6 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import "./style.css";
 import Header from "./components/header";
-import Siban from "./components/siban";
 import SibanRouter from "./routes/sibanRouter";
 import ActivityRouter from "./routes/activityRouter";
 import ArtistRouter from "./routes/artistRouter";
