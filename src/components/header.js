@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const headerLogo = "../assets/header_logo.jpg";
+const headerLogo = "../assets/main_logo_white.jpg";
 
 const HeaderSection = styled.header`
 	height: 200px;
@@ -24,8 +24,8 @@ const LogoBox = styled.div`
 	align-items: center;
 `;
 const Logo = styled.img`
-	width: 80%;
-	height: 80%;
+	width: 100%;
+	height: 100%;
 	margin: 0 auto;
 `;
 const MenuNav = styled.div`
@@ -80,7 +80,7 @@ const NavItem = styled.li`
 const socialLinkItems = [
 	{
 		name: "Youtube",
-		url: "https://www.youtube.com/channel/UCLXAm23QnEYE_WNyjUK3qyQ/about",
+		url: "https://www.youtube.com/channel/UCLXAm23QnEYE_WNyjUK3qyQ/featured",
 		img: "youtube",
 	},
 	{
