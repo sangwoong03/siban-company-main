@@ -2,6 +2,8 @@
 
 ---
 
+[web site link](http://siban-company.netlify.app)
+
 <br>
 
 1. Layout (portfolio 앱)
@@ -28,6 +30,8 @@
 
 3. 상태 관리
 
-- Atom
-- Recoil
 - react-rotuer-dom
+
+4. 배포 사이트
+
+- [netlify](https://www.netlify.com/)
