@@ -50,7 +50,11 @@ function Intro() {
 				<TitleBox>
 					<h1> [시:반] 일상 공유 </h1>
 					<p>
-						<a href="https://www.youtube.com/channel/UCLXAm23QnEYE_WNyjUK3qyQ">
+						<a
+							href="https://www.youtube.com/channel/UCLXAm23QnEYE_WNyjUK3qyQ/featured"
+							target="_blank"
+							rel="noreferrer"
+						>
 							Youtube
 						</a>
 					</p>
