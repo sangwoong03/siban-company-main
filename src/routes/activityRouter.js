@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import ActivityMainSection from "./activityMainSection";
-import ActivityVideoSection from "./activityVideoSection";
-import ActivityLessonSection from "./activityLessonSection";
-import ActivityDailySection from "./activityDailySection";
+import ActivityMainSection from "./activity/activityMainSection";
+import ActivityVideoSection from "./activity/activityVideoSection";
+import ActivityLessonSection from "./activity/activityLessonSection";
+import ActivityDailySection from "./activity/activityDailySection";
 
 const ActivityHeader = styled.header`
 	margin: 0 auto 20px auto;
