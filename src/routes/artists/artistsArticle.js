@@ -1,0 +1,145 @@
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+
+const ArtistProfile = styled.article`
+	width: 100%;
+	height: 600px;
+	display: flex;
+	padding: 50px 80px;
+	margin: 0 auto 100px auto;
+	box-sizing: border-box;
+`;
+const ImageBox = styled.div`
+	width: 400px;
+	margin-right: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	& > img {
+	}
+`;
+const DescBox = styled.div`
+	width: 500px;
+	display: flex;
+`;
+const LeftSide = styled.div`
+	text-align: end;
+	font-size: 1.1rem;
+	font-weight: bold;
+	margin-right: 20px;
+	width: 130px;
+	& li {
+		margin: 15px 0;
+	}
+`;
+const RightSide = styled.div`
+	font-size: 1.1rem;
+	& li {
+		margin: 15px 0;
+	}
+	& a:hover {
+		color: rgba(0, 0, 0, 0.3);
+	}
+`;
+
+function ArtistArticle({
+	imageUrl,
+	height,
+	firstGenre,
+	secondGenre,
+	thirdGenre,
+	fourthGenre,
+	name,
+	age,
+	body,
+	email,
+	instagram,
+	skill,
+	rolePlay,
+	shortCut,
+	secondGenreList,
+	thirdGenreList,
+	fourthGenreList,
+}) {
+	return (
+		<ArtistProfile>
+			<ImageBox>
+				<img src={imageUrl} alt="profile" />
+			</ImageBox>
+			<DescBox>
+				<LeftSide>
+					<ul>
+						<li> 이름 </li>
+						<li> 생년월일 </li>
+						<li> 키/몸무게 </li>
+						<li> 이메일 </li>
+						<li> 인스타그램 </li>
+						<li> 특기 </li>
+						<li> [대표작품] </li>
+						<li style={{ height }}> 연극 </li>
+						<li> {firstGenre} </li>
+						<li> {secondGenre} </li>
+						<li> {thirdGenre} </li>
+						<li> {fourthGenre} </li>
+					</ul>
+				</LeftSide>
+				<RightSide>
+					<ul>
+						<li> {name} </li>
+						<li> {age} </li>
+						<li> {body} </li>
+						<li> {email} </li>
+						<li>
+							<a
+								href={`https://instagram.com/${instagram}_?utm_medium=copy_link`}
+								target="_blank"
+								rel="noreferrer"
+							>
+								{instagram}
+							</a>
+						</li>
+						<li> {skill} </li>
+						<li> &nbsp; </li>
+						<ul style={{ height }}>
+							{rolePlay.map((item, index) => (
+								<li key={index}> {item} </li>
+							))}
+						</ul>
+						<ul>
+							{shortCut.map((item, index) => (
+								<li key={index}> {item} </li>
+							))}
+						</ul>
+						<li> {secondGenreList} </li>
+						<li> {thirdGenreList} </li>
+						<li> {fourthGenreList} </li>
+					</ul>
+				</RightSide>
+			</DescBox>
+		</ArtistProfile>
+	);
+}
+ArtistArticle.defaultProps = {
+	imageUrl: "",
+	firstGenre: "",
+	secondGenre: "",
+	thirdGenre: "",
+	fourthGenre: "",
+	name: "배우 이름",
+	age: "생년 월일",
+	body: "키 / 몸무게",
+	email: "이메일 주소",
+	instagram: "인스타그램 아이디",
+	skill: "장점 및 특기",
+	rolePlay: [],
+	shortCut: [],
+	secondGenreList: "",
+	thirdGenreList: "",
+	fourthGenreList: "",
+};
+ArtistArticle.propTypes = {
+	rolePlay: PropTypes.arrayOf(PropTypes.string).isRequired,
+	shortCut: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+export default ArtistArticle;
