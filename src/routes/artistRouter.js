@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ArtistMainSection from "./artistSection";
+import ArtistMainSection from "./artists/artistSection";
 
 const ArtistsHeader = styled.header`
 	margin: 0 auto 20px auto;
