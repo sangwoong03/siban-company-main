@@ -77,11 +77,6 @@ const ProfileTiles = styled.li`
 
 const artistProfile = [
 	{
-		name: "최영광",
-		src: "../assets/younggwang_main.jpg",
-		instaAc: "c.glory",
-	},
-	{
 		name: "신락훈",
 		src: "../assets/rakoon_main.jpg",
 		instaAc: "raccoonee_",
@@ -102,10 +97,15 @@ const artistProfile = [
 		instaAc: "jung_jh9407",
 	},
 	{
-		name: "윤수영",
-		src: "../assets/suyoung_main.jpg",
-		instaAc: "swimee",
+		name: "최영광",
+		src: "../assets/younggwang_main.jpg",
+		instaAc: "c.glory",
 	},
+	// {
+	// 	name: "윤수영",
+	// 	src: "../assets/suyoung_main.jpg",
+	// 	instaAc: "swimee",
+	// },
 ];
 
 function Artist() {
