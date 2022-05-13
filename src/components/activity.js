@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import SlideBtn from "./button/slideBtn";
@@ -79,31 +79,31 @@ const ActivityTiles = styled.li`
 const activityItems = [
 	{
 		title: "그대 내곁에 (강릉)",
-		brief: "2022년 5월 14일 ~ (예정)",
+		brief: "2022년 5월 14일 ~ 15일",
 		src: "../assets/siban_activity_Gangneung.jpg",
 		schedule: true,
 	},
 	{
 		title: "그대 내곁에 (서울)",
-		brief: "2021년 12월 21일 ~ 26일 (종료)",
+		brief: "2021년 12월 21일 ~ 26일",
 		src: "../assets/act_1.jpg",
 		schedule: false,
 	},
 	{
 		title: "끝맺음 (prod. 임석원) - 김홍준",
-		brief: "뮤직비디오 (종료)",
+		brief: "뮤직비디오",
 		src: "../assets/act_2.jpg",
 		schedule: false,
 	},
 	{
 		title: "월드 2인극 페스티벌",
-		brief: "2인극 (종료)",
+		brief: "2인극",
 		src: "../assets/act_3.gif",
 		schedule: false,
 	},
 ];
 function Activity() {
-	function slideBtn(e) {
+	const slideBtn = (e) => {
 		const id = e.target.id;
 		const ul = document.querySelector(".slide--wrapper--activities");
 
@@ -112,7 +112,7 @@ function Activity() {
 		} else if (id === "right-btn") {
 			ul.style.transform = `translateX(-960px)`;
 		}
-	}
+	};
 	return (
 		<HomeActivity>
 			<Inner>
@@ -136,6 +136,15 @@ function Activity() {
 											}
 										>
 											{item.brief}
+											<span
+												style={
+													item.schedule
+														? { color: "red", fontSize: ".8rem" }
+														: { color: "inherit" }
+												}
+											>
+												{item.schedule ? " [공연 예정]" : " [종료]"}
+											</span>
 										</p>
 										<img src={item.src} alt={item.title} title="이동" />
 										<h2> {item.title} </h2>
