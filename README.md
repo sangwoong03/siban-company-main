@@ -13,6 +13,8 @@
 - Layout
   - header (logo, nav, link)
   - nav (including main & board)
+    - board for communication with users
+    - using Node.js & MongoDB as using netlify for deploying and pre web site
   - main
     - poster
     - artists
@@ -28,7 +30,7 @@
   npm i styled-reset
 ```
 
-3. 상태 관리
+3. 상태 관리 (차후 변경)
 
 - react-rotuer-dom
 
@@ -36,6 +38,7 @@
 
 - [netlify](https://www.netlify.com/)
 - 배포 파일
+
 ```
 npm run build
 ```
