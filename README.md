@@ -35,3 +35,7 @@
 4. 배포 사이트
 
 - [netlify](https://www.netlify.com/)
+- 배포 파일
+```
+npm run build
+```
