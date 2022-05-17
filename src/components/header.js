@@ -42,16 +42,13 @@ const LinkItem = styled.li`
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	& > span {
-		margin-right: 5px;
+	padding: 10px;
+	& > a > span {
 		font-szie: 1rem;
 	}
 	&:hover {
 		text-decoration: underline;
 		color: rgba(0, 0, 0, 0.5);
-	}
-	& a {
-		padding: 10px;
 	}
 	:first-child {
 		margin-left: 20px;
@@ -79,12 +76,12 @@ const NavItem = styled.li`
 
 const socialLinkItems = [
 	{
-		name: "Youtube",
+		name: " Youtube",
 		url: "https://www.youtube.com/channel/UCLXAm23QnEYE_WNyjUK3qyQ/featured",
 		img: "youtube",
 	},
 	{
-		name: "Instagram",
+		name: " Instagram",
 		url: "https://instagram.com/siban.company?utm_medium=copy_link",
 		img: "instagram",
 	},
@@ -126,10 +123,10 @@ function Header() {
 					<SocialLink>
 						{socialLinkItems.map((item, index) => (
 							<LinkItem key={index}>
-								<span>
-									<i className={`ri-${item.img}-line`}></i>
-								</span>
 								<a href={item.url} target="_blank" rel="noreferre noreferrer">
+									<span>
+										<i className={`ri-${item.img}-line`}></i>
+									</span>
 									{item.name}
 								</a>
 							</LinkItem>
