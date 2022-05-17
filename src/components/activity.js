@@ -81,7 +81,7 @@ const activityItems = [
 		title: "그대 내곁에 (강릉)",
 		brief: "2022년 5월 14일 ~ 15일",
 		src: "../assets/siban_activity_Gangneung.jpg",
-		schedule: true,
+		schedule: false,
 	},
 	{
 		title: "그대 내곁에 (서울)",
