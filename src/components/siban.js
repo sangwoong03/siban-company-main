@@ -1,20 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import InnerBox from "./Inner";
 
 const HomeSiban = styled.section`
 	background: #000000;
 	color: #ffffff;
 	text-align: center;
 `;
-const Inner = styled.div`
-	max-width: 1200px;
-	height: 650px;
-	margin: 0 auto;
-	display: flex;
-	background: url("../assets/main_photo.png") no-repeat;
-	background-size: cover;
-	position: relative;
-`;
+
 const Cover = styled.div`
 	position: absolute;
 	top: 0;
@@ -45,7 +38,7 @@ const Cover = styled.div`
 function Siban() {
 	return (
 		<HomeSiban>
-			<Inner>
+			<InnerBox height={"650px"} siban>
 				<Cover>
 					<div>
 						<p> 예 술 창 작 집 단</p>
@@ -53,7 +46,7 @@ function Siban() {
 						<p> 시 작 이 &nbsp; 반 이 다</p>
 					</div>
 				</Cover>
-			</Inner>
+			</InnerBox>
 		</HomeSiban>
 	);
 }
