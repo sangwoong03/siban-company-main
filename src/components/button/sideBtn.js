@@ -83,7 +83,7 @@ function SideButton() {
 					<FontAwesomeIcon icon={faImagePortrait} size="2x" />
 				</Button>
 			</Link>
-			<Link to="/activiy">
+			<Link to="/activity">
 				<Button>
 					{" "}
 					<FontAwesomeIcon icon={faIcons} size="2x" />{" "}
