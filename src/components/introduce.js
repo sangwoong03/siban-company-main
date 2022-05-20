@@ -1,32 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import InnerBox from "./Inner";
+import TitleBox from "./titleBox";
 
 const IntroBox = styled.section`
 	padding: 100px 0 150px 0;
 	text-align: center;
 `;
-const Inner = styled.div`
-	max-width: 1200px;
-	margin: 0 auto;
-	height: 500px;
-	position: relative;
-`;
-const TitleBox = styled.div`
-	max-width: 860px;
-	padding-bottom: 10px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: end;
-	border-bottom: 1px solid #2b2b2b;
-	& > h1 {
-		font-size: 2.5rem;
-	}
-	& > p:hover a {
-		color: #cc0000;
-		font-weight: bold;
-	}
-`;
+
 const VideoBox = styled.div`
 	max-width: 860px;
 	margin: 50px auto;
@@ -46,8 +27,8 @@ const VideoRatio = styled.div`
 function Intro() {
 	return (
 		<IntroBox>
-			<Inner>
-				<TitleBox>
+			<InnerBox>
+				<TitleBox introduce>
 					<h1> [시:반] 일상 공유 </h1>
 					<p>
 						<a
@@ -70,7 +51,7 @@ function Intro() {
 						></iframe>
 					</VideoRatio>
 				</VideoBox>
-			</Inner>
+			</InnerBox>
 		</IntroBox>
 	);
 }
