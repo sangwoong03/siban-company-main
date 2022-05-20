@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import InnerBox from "./Inner";
+import TitleBox from "./titleBox";
+
 import {
 	faBuildingUser,
 	faSquareParking,
@@ -15,27 +18,7 @@ const HomeLocation = styled.section`
 	margin-bottom: 50px;
 	text-align: center;
 `;
-const Inner = styled.div`
-	max-width: 1200px;
-	margin: 0 auto;
-	position: relative;
-`;
-const TitleBox = styled.div`
-	max-width: 860px;
-	padding-bottom: 10px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: end;
-	border-bottom: 1px solid #2b2b2b;
-	& > h1 {
-		font-size: 2.5rem;
-	}
-	& > p:hover a {
-		color: #00c73c;
-		font-weight: bold;
-	}
-`;
+
 const MapWrapper = styled.div`
 	margin: 50px auto;
 	width: 860px;
@@ -166,19 +149,23 @@ function LocationSiban() {
 
 	return (
 		<HomeLocation>
-			<Inner>
+			<InnerBox height={"auto"}>
 				<TitleBox>
 					<h1> [시:반] 오시는 길 </h1>
-					<Link
-						to="/location"
-						style={
-							window.location.pathname === "/location"
-								? { display: "none" }
-								: { display: "block" }
-						}
-					>
-						<p>자세히 보기</p>
-					</Link>
+
+					<p>
+						<Link
+							to="/location"
+							style={
+								window.location.pathname === "/location"
+									? { display: "none" }
+									: { display: "block" }
+							}
+						>
+							{" "}
+							자세히 보기{" "}
+						</Link>
+					</p>
 				</TitleBox>
 				<MapWrapper>
 					<KakaoMap id="map"></KakaoMap>
@@ -266,7 +253,7 @@ function LocationSiban() {
 						</div>
 					</MapInfo>
 				</MapWrapper>
-			</Inner>
+			</InnerBox>
 		</HomeLocation>
 	);
 }
