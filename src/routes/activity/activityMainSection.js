@@ -135,9 +135,12 @@ function ActivityMainSection() {
 							<li> 줄거리 </li>
 						</LeftList>
 						<RightList>
-							<li> 그대 내 곁에 </li>
+							<li>
+								{" "}
+								그대 내 곁에 <span style={{ color: "red" }}> (공연 종료) </span>
+							</li>
 							<li> 드라마극 (80분) </li>
-							<li> 2022-05-14.(토) ~ 2022-05-15.(일)</li>
+							<li> 2022-05-14.(토) ~ 2022-05-15.(일) </li>
 							<ul
 								className="right-list--time"
 								style={{ height: "50px", marginBottom: "20px" }}
@@ -160,7 +163,7 @@ function ActivityMainSection() {
 									가지고 있는 미련이 어떤 미련인지 살펴보기로 한다
 								</p>
 							</li>
-							<li>
+							{/* <li>
 								<ButtonBox>
 									<a
 										href="https://booking.naver.com/booking/12/bizes/686227"
@@ -177,7 +180,7 @@ function ActivityMainSection() {
 										공연장 위치
 									</a>
 								</ButtonBox>
-							</li>
+							</li> */}
 						</RightList>
 					</DescriptionBox>
 				</BasicInfo>
