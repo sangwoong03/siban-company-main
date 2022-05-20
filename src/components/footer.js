@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import InnerBox from "./Inner";
 
 const footerLogo = "../assets/main_logo_black.jpg";
 const FooterSection = styled.footer`
@@ -8,13 +9,7 @@ const FooterSection = styled.footer`
 	color: #fff;
 	text-align: center;
 `;
-const Inner = styled.div`
-	max-width: 1200px;
-	height: 100%;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-`;
+
 const LogoBox = styled.div`
 	width: 250px;
 	height: 100%;
@@ -93,7 +88,7 @@ Object.keys(inforList).forEach((key) => infoValue.push(inforList[key]));
 function Footer() {
 	return (
 		<FooterSection>
-			<Inner>
+			<InnerBox height={"100%"} footer>
 				<LogoBox>
 					<Logo src={footerLogo} />
 				</LogoBox>
@@ -123,7 +118,7 @@ function Footer() {
 						))}
 					</ul>
 				</InfoBox>
-			</Inner>
+			</InnerBox>
 		</FooterSection>
 	);
 }
