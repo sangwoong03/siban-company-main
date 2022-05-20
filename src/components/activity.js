@@ -2,29 +2,14 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import SlideBtn from "./button/slideBtn";
+import InnerBox from "./Inner";
+import TitleBox from "./titleBox";
 
 const HomeActivity = styled.section`
 	padding: 100px 0;
 	text-align: center;
 `;
-const Inner = styled.div`
-	max-width: 1200px;
-	margin: 0 auto;
-	height: 500px;
-	position: relative;
-`;
-const TitleBox = styled.div`
-	max-width: 860px;
-	padding-bottom: 10px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: end;
-	border-bottom: 1px solid #2b2b2b;
-	& > h1 {
-		font-size: 2.5rem;
-	}
-`;
+
 const AcitvityBox = styled.div`
 	max-width: 960px;
 	height: 100%;
@@ -115,7 +100,7 @@ function Activity() {
 	};
 	return (
 		<HomeActivity>
-			<Inner>
+			<InnerBox>
 				<TitleBox>
 					<h1> [시:반] 일상 </h1>
 					<p>
@@ -155,7 +140,7 @@ function Activity() {
 					</ActivityWrapper>
 				</AcitvityBox>
 				<SlideBtn onClick={slideBtn} />
-			</Inner>
+			</InnerBox>
 		</HomeActivity>
 	);
 }
