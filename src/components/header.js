@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import InnerBox from "./Inner";
 
 const headerLogo = "../assets/main_logo_white.jpg";
 
@@ -9,12 +10,6 @@ const HeaderSection = styled.header`
 	text-align: center;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.75);
 	box-shadow: 0 0 5px rgba(0 0 0 / 75);
-`;
-const Inner = styled.div`
-	max-width: 1200px;
-	height: 100%;
-	margin: 0 auto;
-	display: flex;
 `;
 const LogoBox = styled.div`
 	width: 200px;
@@ -113,7 +108,7 @@ const navRouterItems = [
 function Header() {
 	return (
 		<HeaderSection>
-			<Inner>
+			<InnerBox height={"100%"} header>
 				<LogoBox>
 					<Link to="/">
 						<Logo src={headerLogo} />
@@ -140,7 +135,7 @@ function Header() {
 						))}
 					</NavGroup>
 				</MenuNav>
-			</Inner>
+			</InnerBox>
 		</HeaderSection>
 	);
 }
