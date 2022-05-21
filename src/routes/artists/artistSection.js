@@ -1,23 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import ArtistArticle from "./artistsArticle";
+import SideNavForRouter from "../RouterSideNav";
 
-const SideNav = styled.div`
-	width: 200px;
-	height: 100%;
-	text-align: center;
-	background: rgba(0, 0, 0, 0.05);
-	& > ul > li {
-		font-size: 1.1rem;
-		font-weight: bold;
-		margin: 50px 0;
-		cursor: pointer;
-	}
-	& > ul > li:hover {
-		color: rgba(0, 0, 0, 0.4);
-		text-decoration: underline;
-	}
-`;
 const ProfileWrapper = styled.section`
 	width: 1200px;
 	height: 600px;
@@ -174,7 +159,7 @@ function ArtistMainSection() {
 	};
 	return (
 		<>
-			<SideNav>
+			<SideNavForRouter>
 				<ul>
 					{nameList.map((item, index) => (
 						<li key={index}>
@@ -184,7 +169,7 @@ function ArtistMainSection() {
 						</li>
 					))}
 				</ul>
-			</SideNav>
+			</SideNavForRouter>
 			<ProfileWrapper>{article}</ProfileWrapper>
 		</>
 	);
