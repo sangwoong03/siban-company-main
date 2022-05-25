@@ -14,7 +14,8 @@
   - header (logo, nav, link)
   - nav (including main & board)
     - board for communication with users
-    - using Node.js & MongoDB as using netlify for deploying and pre web site
+    - using Django & MySQL for board router pages
+      - after `wecode back-end session` I added this function.. until that time I have to learn about Python
   - main
     - poster
     - artists
