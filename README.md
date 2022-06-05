@@ -26,6 +26,7 @@
 2. Styled-components (zb 인강 복습)
 
 - style 초기화
+- MediaQuery 추가 (22. 06. 06~)
 
 ```
   npm i styled-reset
@@ -35,10 +36,20 @@
 
 - react-rotuer-dom
 
-4. 배포 사이트
+
+4. 데이터베이스
+
+- MySQL 사용
+- 게시판 게시글/유저 정보 사용
+- Django 프레임워크 사용
+
+
+5. 배포 사이트 (AWS로 변경 예정)
 
 - [netlify](https://www.netlify.com/)
 - 배포 파일
+
+
 
 ```
 npm run build
