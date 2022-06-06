@@ -8,6 +8,9 @@ const FooterSection = styled.footer`
 	background: #000;
 	color: #fff;
 	text-align: center;
+	@media only screen and (max-width: 480px) {
+		height: 150px;
+	}
 `;
 
 const LogoBox = styled.div`
@@ -21,6 +24,10 @@ const Logo = styled.img`
 	width: 200px;
 	height: 200px;
 	margin: 0 auto;
+	@media only screen and (max-width: 480px) {
+		width: 150px;
+		height: 150px;
+	}
 `;
 const LinkBox = styled.div`
 	flex: 1;
@@ -43,6 +50,9 @@ const LinkBox = styled.div`
 	& > ul > li:hover {
 		color: rgba(255, 255, 255, 0.7);
 	}
+	@media only screen and (max-width: 480px) {
+		display: none;
+	}
 `;
 const InfoBox = styled.div`
 	width: 250px;
@@ -59,6 +69,9 @@ const InfoBox = styled.div`
 	}
 	& ul > li {
 		padding: 5px 0;
+	}
+	@media only screen and (max-width: 480px) {
+		font-size: 0.5rem;
 	}
 `;
 
