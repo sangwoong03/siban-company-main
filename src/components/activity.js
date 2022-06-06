@@ -1,33 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import SlideBtn from "./button/slideBtn";
-import InnerBox from "./Inner";
-import TitleBox from "./titleBox";
+import SlideBox from "./slideBox";
 
-const HomeActivity = styled.section`
-	padding: 100px 0;
-	text-align: center;
-`;
-
-const AcitvityBox = styled.div`
-	max-width: 960px;
-	height: 100%;
-	margin: 0 auto;
-	position: relative;
-`;
-const ActivityWrapper = styled.div`
-	max-width: 100%;
-	height: 100%;
-	margin-top: 50px;
-	overflow: hidden;
-`;
-const ActivitySlide = styled.ul`
-	width: 1980px;
-	display: flex;
-	align-items: center;
-	transition: 0.7s ease;
-`;
 const ActivityTiles = styled.li`
 	width: 300px;
 	height: 360px;
@@ -59,6 +33,19 @@ const ActivityTiles = styled.li`
 			color: rgba(0, 0, 0, 0.4);
 		}
 	}
+	@media only screen and (max-width: 480px) {
+		width: 165px;
+		height: 215px;
+		& h2 {
+			font-size: 1rem;
+			font-weight: bold;
+			margin: 10px 0;
+		}
+		& p:first-child {
+			font-size: 0.7rem;
+			padding: 10px 0;
+		}
+	}
 `;
 
 const activityItems = [
@@ -88,60 +75,35 @@ const activityItems = [
 	},
 ];
 function Activity() {
-	const slideBtn = (e) => {
-		const id = e.target.id;
-		const ul = document.querySelector(".slide--wrapper--activities");
-
-		if (id === "left-btn") {
-			ul.style.transform = `translateX(0)`;
-		} else if (id === "right-btn") {
-			ul.style.transform = `translateX(-960px)`;
-		}
-	};
 	return (
-		<HomeActivity>
-			<InnerBox>
-				<TitleBox>
-					<h1> [시:반] 일상 </h1>
-					<p>
-						<Link to="/activity">자세히 보기</Link>
-					</p>
-				</TitleBox>
-				<AcitvityBox>
-					<ActivityWrapper>
-						<ActivitySlide className="slide--wrapper--activities">
-							{activityItems.map((item, index) => (
-								<ActivityTiles key={index}>
-									<div>
-										<p
-											style={
-												item.schedule
-													? { fontWeight: "bold" }
-													: { fontWeight: "regular", color: "#b2b2b2" }
-											}
-										>
-											{item.brief}
-											<span
-												style={
-													item.schedule
-														? { color: "red", fontSize: ".8rem" }
-														: { color: "inherit" }
-												}
-											>
-												{item.schedule ? " [공연 예정]" : " [종료]"}
-											</span>
-										</p>
-										<img src={item.src} alt={item.title} title="이동" />
-										<h2> {item.title} </h2>
-									</div>
-								</ActivityTiles>
-							))}
-						</ActivitySlide>
-					</ActivityWrapper>
-				</AcitvityBox>
-				<SlideBtn onClick={slideBtn} />
-			</InnerBox>
-		</HomeActivity>
+		<SlideBox Name="Activity">
+			{activityItems.map((item, index) => (
+				<ActivityTiles key={index}>
+					<div>
+						<p
+							style={
+								item.schedule
+									? { fontWeight: "bold" }
+									: { fontWeight: "regular", color: "#b2b2b2" }
+							}
+						>
+							{item.brief}
+							<span
+								style={
+									item.schedule
+										? { color: "red", fontSize: ".8rem" }
+										: { color: "inherit" }
+								}
+							>
+								{item.schedule ? " [공연 예정]" : " [종료]"}
+							</span>
+						</p>
+						<img src={item.src} alt={item.title} title="이동" />
+						<h2> {item.title} </h2>
+					</div>
+				</ActivityTiles>
+			))}
+		</SlideBox>
 	);
 }
 

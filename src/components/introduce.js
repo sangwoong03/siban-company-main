@@ -6,15 +6,21 @@ import TitleBox from "./titleBox";
 const IntroBox = styled.section`
 	padding: 100px 0 150px 0;
 	text-align: center;
+	@media only screen and (max-width: 480px) {
+		padding: 100px 0 0 0;
+	}
 `;
 
 const VideoBox = styled.div`
 	max-width: 860px;
 	margin: 50px auto;
+	@media only screen and (max-width: 480px) {
+		max-width: 90%;
+	}
 `;
 const VideoRatio = styled.div`
 	height: 0;
-	padding-top: 56.25%;
+	padding-top: 80%;
 	position: relative;
 	& > iframe {
 		width: 100%;
@@ -27,7 +33,7 @@ const VideoRatio = styled.div`
 function Intro() {
 	return (
 		<IntroBox>
-			<InnerBox>
+			<InnerBox height={"400px"}>
 				<TitleBox introduce>
 					<h1> [시:반] 일상 공유 </h1>
 					<p>

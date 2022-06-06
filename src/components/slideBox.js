@@ -8,6 +8,9 @@ import TitleBox from "./titleBox";
 const BoxHome = styled.section`
 	padding: 100px 0;
 	text-align: center;
+	@media only screen and (max-width: 480px) {
+		padding: 100px 0 0 0;
+	}
 `;
 
 const BoxMain = styled.div`
@@ -15,12 +18,19 @@ const BoxMain = styled.div`
 	height: 100%;
 	margin: 0 auto;
 	position: relative;
+	@media only screen and (max-width: 480px) {
+		max-width: 90%;
+		height: 80%;
+	}
 `;
 const MainWrapper = styled.div`
 	max-width: 100%;
 	height: 100%;
 	margin-top: 50px;
 	overflow: hidden;
+	@media only screen and (max-width: 480px) {
+		overflow: scroll;
+	}
 `;
 const MainSlide = styled.ul`
 	width: 1980px;
@@ -30,6 +40,9 @@ const MainSlide = styled.ul`
 	display: flex;
 	align-items: center;
 	transition: 0.7s ease;
+	@media only screen and (max-width: 480px) {
+		width: 825px;
+	}
 `;
 
 function SlideBox({ children, Name }) {
@@ -75,7 +88,12 @@ function SlideBox({ children, Name }) {
 						</MainSlide>
 					</MainWrapper>
 				</BoxMain>
-				<SlideBtn onClick={slideBtn} />
+				<SlideBtn
+					onClick={slideBtn}
+					style={
+						window.innerWidth < 480 ? { display: "none" } : { display: "block" }
+					}
+				/>
 			</InnerBox>
 		</BoxHome>
 	);

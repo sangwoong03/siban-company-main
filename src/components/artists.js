@@ -1,36 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import SlideBtn from "./button/slideBtn";
-import InnerBox from "./Inner";
-import TitleBox from "./titleBox";
+import SlideBox from "./slideBox";
 
-const HomeArtist = styled.section`
-	padding: 100px 0;
-	text-align: center;
-`;
-
-const ArtistBox = styled.div`
-	max-width: 960px;
-	height: 100%;
-	margin: 0 auto;
-	position: relative;
-`;
-const ProfileWrapper = styled.div`
-	max-width: 100%;
-	height: 100%;
-	margin-top: 50px;
-	overflow: hidden;
-`;
-const ProfileSlide = styled.ul`
-	width: 1980px;
-	position: abosolute;
-	top: 0;
-	left: 320px;
-	display: flex;
-	align-items: center;
-	transition: 0.7s ease;
-`;
 const ProfileTiles = styled.li`
 	width: 300px;
 	height: 360px;
@@ -54,6 +25,15 @@ const ProfileTiles = styled.li`
 		&:hover {
 			color: rgba(0, 0, 0, 0.4);
 		}
+	}
+	@media only screen and (max-width: 480px) {
+		width: 165px;
+		height: 215px;
+		& p {
+			font-size: .8rem;
+		}
+		& a {
+			font-size: .8rem;
 	}
 `;
 
@@ -91,58 +71,22 @@ const artistProfile = [
 ];
 
 function Artist() {
-	function slideBtn(e) {
-		const id = e.target.id;
-		const ul = document.querySelector(".slide--wrapper");
-
-		if (id === "left-btn") {
-			ul.style.transform = `translateX(0)`;
-		} else if (id === "right-btn") {
-			ul.style.transform = `translateX(-960px)`;
-		}
-	}
 	return (
-		<HomeArtist>
-			<InnerBox>
-				<TitleBox>
-					<h1> [시:반] 아티스트 </h1>
-					<p>
-						<Link to="/artists">자세히 보기</Link>
-					</p>
-				</TitleBox>
-				<ArtistBox>
-					<ProfileWrapper>
-						<ProfileSlide className="slide--wrapper">
-							{artistProfile.map((item, index) => (
-								<ProfileTiles key={index}>
-									<div>
-										<img src={item.src} alt={item.name} />
-										<p> {item.name} </p>
-										<a
-											href={`{https://instagram.com/${item.instaAc}_?utm_medium=copy_link}`}
-										>
-											@{item.instaAc}
-										</a>
-									</div>
-								</ProfileTiles>
-							))}
-						</ProfileSlide>
-					</ProfileWrapper>
-				</ArtistBox>
-				<SlideBtn
-					onClick={slideBtn}
-					// (e) => {
-					// if (e.target.id === "left-btn") {
-					// 	const ul = document.querySelector(".slide--wrapper");
-					// 	for (let i = 1; i <= artistProfile.length - 3; i++) {
-					// 		ul.style.transform = `translateX(-320px)`; // 여기서 봐야됨
-					// 	}
-					// } else if (e.target.id === "right-btn") {
-					// 	console.log("right");
-					// }
-				/>
-			</InnerBox>
-		</HomeArtist>
+		<SlideBox Name="Artist">
+			{artistProfile.map((item, index) => (
+				<ProfileTiles key={index}>
+					<div>
+						<img src={item.src} alt={item.name} />
+						<p> {item.name} </p>
+						<a
+							href={`{https://instagram.com/${item.instaAc}_?utm_medium=copy_link}`}
+						>
+							@{item.instaAc}
+						</a>
+					</div>
+				</ProfileTiles>
+			))}
+		</SlideBox>
 	);
 }
 

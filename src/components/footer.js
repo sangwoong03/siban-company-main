@@ -12,7 +12,6 @@ const FooterSection = styled.footer`
 		height: 150px;
 	}
 `;
-
 const LogoBox = styled.div`
 	width: 250px;
 	height: 100%;
@@ -25,8 +24,8 @@ const Logo = styled.img`
 	height: 200px;
 	margin: 0 auto;
 	@media only screen and (max-width: 480px) {
-		width: 150px;
-		height: 150px;
+		width: 125px;
+		height: 125px;
 	}
 `;
 const LinkBox = styled.div`

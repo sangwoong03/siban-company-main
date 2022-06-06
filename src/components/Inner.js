@@ -25,6 +25,11 @@ function InnerBox({ children, height, ...rest }) {
 				background: url("../assets/main_photo.png") no-repeat;
 				background-size: cover;
 				position: relative;
+				@media only screen and (max-width: 480px) {
+					width: 300px;
+					background: none;
+					height: 300px;
+				}
 			`}
 	`;
 	return <Inner {...rest}> {children} </Inner>;
