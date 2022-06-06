@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import InnerBox from "./Inner";
 
@@ -32,6 +32,20 @@ const Cover = styled.div`
 	}
 	& > div > h2 {
 		font-size: 4rem;
+	}
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+		& > div {
+			position: static;
+			margin: 70px auto;
+		}
+		& > div > p {
+			font-size: .5rem;
+			margin 10px 0;
+		}
+		& > div > h2 {
+			font-size: 2rem;
+		}
 	}
 `;
 

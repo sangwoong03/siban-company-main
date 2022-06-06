@@ -27,6 +27,15 @@ function TitleBox({ children, ...rest }) {
 					font-weight: bold;
 				}
 			`}
+		@media only screen and (max-width: 480px) {
+			max-width: 90%;
+			& > h1 {
+				font-size: 1.5rem;
+			}
+			& > p {
+				font-size: 0.7rem;
+			}
+		}
 	`;
 
 	return <TitleBox {...rest}> {children} </TitleBox>;

@@ -1,4 +1,3 @@
-import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -37,6 +36,17 @@ const Button = styled.button`
 		transform: scale(calc(1.1));
 		border-radius: 30px;
 	}
+	@media only screen and (max-width: 480px) {
+		width: 40px;
+		height: 40px;
+		& > svg {
+			width: 15px;
+		}
+		&:hover {
+			transform: none;
+			border-radius: none;
+		}
+	}
 `;
 
 function SideButton() {
@@ -66,7 +76,6 @@ function SideButton() {
 	});
 
 	const moveToTop = () => {
-		console.log("top");
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
 	return (
@@ -85,8 +94,7 @@ function SideButton() {
 			</Link>
 			<Link to="/activity">
 				<Button>
-					{" "}
-					<FontAwesomeIcon icon={faIcons} size="2x" />{" "}
+					<FontAwesomeIcon icon={faIcons} size="2x" />
 				</Button>
 			</Link>
 			<Link to="/connection">
