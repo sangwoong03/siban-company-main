@@ -23,15 +23,20 @@ const MapWrapper = styled.div`
 	margin: 50px auto;
 	width: 860px;
 	height: 100%;
+	@media only screen and (max-width: 480px) {
+		width: 90%;
+	}
 `;
 const KakaoMap = styled.div`
 	width: 100%;
 	height: 400px;
 	border-radius: 5px;
+	@media only screen and (max-width: 480px) {
+		height: 250px;
+	}
 `;
 const MapInfo = styled.div`
 	width: 100%;
-
 	& > #info-header {
 		padding: 50px 0px;
 		display: flex;
@@ -124,6 +129,46 @@ const MapInfo = styled.div`
 	& > #detail-wrapper > ul:last-child > li:nth-child(3) p {
 		margin-top: 10px;
 	}
+	@media only screen and (max-width: 480px) {
+		& > #info-header {
+			padding: 30px 0px;
+		}
+		& > #info-header > #info-group {
+			width: 50%;
+			margin-right: 25px;
+		}
+		& > #info-header > #info-group > p {
+			margin-bottom: 10px;
+			font-size: 0.5rem;
+			text-align: start;
+		}
+
+		& > #info-header > #info-group > h2 {
+			font-size: 1rem;
+			font-weight: bold;
+		}
+		& > #info-header > #btn-group {
+			width: 50%;
+			display: flex;
+			align-items: center;
+		}
+		& > #info-header > #btn-group > a {
+			font-size: 0.7rem;
+		}
+		& > #detail-wrapper > ul:first-child {
+			width: 40%;
+			font-size: 0.7rem;
+		}
+		& > #detail-wrapper > ul > li {
+			padding: 30px 0;
+			font-size: 0.8rem;
+			height: 20%;
+		}
+		& > #detail-wrapper > ul:last-child > li {
+			padding: 30px 10px;
+			font-size: 0.7rem;
+		}
+	}
 `;
 
 function LocationSiban() {
@@ -162,8 +207,7 @@ function LocationSiban() {
 									: { display: "block" }
 							}
 						>
-							{" "}
-							자세히 보기{" "}
+							자세히 보기
 						</Link>
 					</p>
 				</TitleBox>
