@@ -10,6 +10,10 @@ const HeaderSection = styled.header`
 	text-align: center;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.75);
 	box-shadow: 0 0 5px rgba(0 0 0 / 75);
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+		height: 150px;
+	}
 `;
 const LogoBox = styled.div`
 	width: 200px;
@@ -17,6 +21,12 @@ const LogoBox = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media only screen and (max-width: 480px) {
+		position: absolute;
+		width: 100px;
+		top: -25px;
+		left: 25px;
+	}
 `;
 const Logo = styled.img`
 	width: 100%;
@@ -39,7 +49,7 @@ const LinkItem = styled.li`
 	cursor: pointer;
 	padding: 10px;
 	& > a > span {
-		font-szie: 1rem;
+		font-size: 1rem;
 	}
 	&:hover {
 		text-decoration: underline;
@@ -48,11 +58,19 @@ const LinkItem = styled.li`
 	:first-child {
 		margin-left: 20px;
 	}
+	@media only screen and (max-width: 480px) {
+		& > a > span {
+			font-size: 0.7rem;
+		}
+	}
 `;
 const NavGroup = styled.ul`
 	display: flex;
 	justify-content: space-around;
 	margin-top: 50px;
+	@media only screen and (max-width: 480px) {
+		margin-top: 30px;
+	}
 `;
 const NavItem = styled.li`
 	font-size: 1.2rem;
@@ -66,6 +84,14 @@ const NavItem = styled.li`
 	}
 	& a {
 		padding: 20px;
+	}
+	@media only screen and (max-width: 480px) {
+		z-index: 5;
+		font-size: 0.7rem;
+		margin-top: 15px;
+		& a {
+			padding: 10px;
+		}
 	}
 `;
 
