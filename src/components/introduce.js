@@ -4,7 +4,7 @@ import InnerBox from "./Inner";
 import TitleBox from "./titleBox";
 
 const IntroBox = styled.section`
-	padding: 100px 0 150px 0;
+	padding: 100px 0 250px 0;
 	text-align: center;
 	@media only screen and (max-width: 480px) {
 		padding: 100px 0 0 0;
@@ -20,7 +20,7 @@ const VideoBox = styled.div`
 `;
 const VideoRatio = styled.div`
 	height: 0;
-	padding-top: 80%;
+	padding-top: 56.25%;
 	position: relative;
 	& > iframe {
 		width: 100%;
