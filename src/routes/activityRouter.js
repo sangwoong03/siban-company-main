@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import ActivityMainSection from "./activity/activityMainSection";
 import ActivityVideoSection from "./activity/activityVideoSection";
 import ActivityLessonSection from "./activity/activityLessonSection";

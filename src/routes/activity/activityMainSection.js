@@ -5,6 +5,10 @@ const BasicInfo = styled.div`
 	margin-top: 50px;
 	width: 100%;
 	display: flex;
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+		margin: 30px auto 0 auto;
+	}
 `;
 const PosterBox = styled.div`
 	width: 40%;
@@ -14,23 +18,11 @@ const PosterBox = styled.div`
 	& > img {
 		width: 300px;
 	}
-`;
-const ButtonBox = styled.div`
-	margin-top: 20px;
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	& > a {
-		width: 35%;
-		text-align: center;
-		font-size: 0.9rem;
-		background: white;
-		padding: 10px 15px;
-		border-radius: 5px;
-		background: rgba(0, 0, 0, 0.1);
-	}
-	& > a:hover {
-		background: rgba(0, 0, 0, 0.2);
+	@media only screen and (max-width: 480px) {
+		width: 120px;
+		& > img {
+			width: 100%;
+		}
 	}
 `;
 const DescriptionBox = styled.div`
@@ -47,12 +39,22 @@ const LeftList = styled.ul`
 	& > li {
 		margin-bottom: 20px;
 	}
+
+	@media only screen and (max-width: 480px) {
+		font-size: 0.7rem;
+		width: 15%;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
 `;
 const RightList = styled.ul`
 	flex: 1;
 	font-size: 1.2rem;
 	& > li {
 		margin-bottom: 20px;
+	}
+	@media only screen and (max-width: 480px) {
+		font-size: 0.7rem;
 	}
 `;
 const PosterSub = styled.div`
@@ -61,6 +63,13 @@ const PosterSub = styled.div`
 	& > img {
 		width: 800px;
 		margin: 0 auto;
+	}
+	@media only screen and (max-width: 480px) {
+		margin-top: 30px;
+		& > img {
+			width: 100%;
+			margin: 0 auto;
+		}
 	}
 `;
 
@@ -91,6 +100,10 @@ function ActivityMainSection() {
 		height: ${height};
 		overflow: ${overflow};
 		position: relative;
+		@media only screen and (max-width: 480px) {
+			width: 90%;
+			margin: 0 auto;
+		}
 	`;
 	const MoreInfoBtnBox = styled.div`
 		width: 800px;
@@ -117,6 +130,13 @@ function ActivityMainSection() {
 		& > span:hover {
 			background: rgba(0, 0, 0, 0.2);
 		}
+
+		@media only screen and (max-width: 480px) {
+			width: 100%;
+			height: 200px;
+			& > span {
+				font-size: .7rem;
+		}
 	`;
 	return (
 		<>
@@ -136,7 +156,6 @@ function ActivityMainSection() {
 						</LeftList>
 						<RightList>
 							<li>
-								{" "}
 								그대 내 곁에 <span style={{ color: "red" }}> (공연 종료) </span>
 							</li>
 							<li> 드라마극 (80분) </li>
@@ -160,7 +179,7 @@ function ActivityMainSection() {
 									저승으로 가게 된 만수. 세명의 저승사자들의 안내에 따라
 									저승에서의 마지막 여정을 떠나려는데.. 이승에서의 못다한 미련
 									때문에 쉽게 발걸음을 떼지 못한다. 이에 저승사자들은 만수가
-									가지고 있는 미련이 어떤 미련인지 살펴보기로 한다
+									가지고 있는 미련이 어떤 미련인지 살펴보기로 한다.
 								</p>
 							</li>
 							{/* <li>

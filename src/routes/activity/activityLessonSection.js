@@ -1,16 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 
-const MainSection = styled.section`
-	width: 1200px;
-`;
-const TextWrapper = styled.div`
-	font-size: 1.2rem;
-	font-weight: bold;
-	text-align: center;
-	margin-top: 100px;
-`;
 function ActivityLessonSection() {
+	const MainSection = styled.section`
+		width: 1200px;
+		@media only screen and (max-width: 480px) {
+			width: 90%;
+			margin: 0 auto;
+		}
+	`;
+	const TextWrapper = styled.div`
+		font-size: 1.2rem;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 100px;
+		@media only screen and (max-width: 480px) {
+			width: 100%;
+			margin: 100px auto 0;
+			font-size: 0.8rem;
+		}
+	`;
 	return (
 		<>
 			<MainSection>

@@ -3,6 +3,10 @@ import styled from "styled-components";
 
 const MainSection = styled.section`
 	width: 1200px;
+	@media only screen and (max-width: 480px) {
+		margin: 0 auto;
+		width: 90%;
+	}
 `;
 const TextWrapper = styled.div`
 	font-size: 1.2rem;
@@ -14,6 +18,11 @@ const TextWrapper = styled.div`
 	}
 	& > p > a:hover {
 		color: rgba(0, 0, 0, 0.3);
+	}
+
+	@media only screen and (max-width: 480px) {
+		font-size: 0.8rem;
+		height: 100%;
 	}
 `;
 function ActivityDailySection() {
