@@ -7,6 +7,12 @@ function WrapperForRouter({ children, height }) {
 		margin: 0 auto 100px auto;
 		height: ${height};
 		display: flex;
+		@media only screen and (max-width: 480px) {
+			max-width: 100%;
+			margin: 0 auto 50px auto;
+			display: block;
+			height: auto;
+		}
 	`;
 
 	return <RouterWrapper> {children} </RouterWrapper>;

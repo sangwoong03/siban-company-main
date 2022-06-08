@@ -17,6 +17,24 @@ function SideNavForRouter({ children }) {
 			color: rgba(0, 0, 0, 0.4);
 			text-decoration: underline;
 		}
+		@media only screen and (max-width: 480px) {
+			width: 90%;
+			margin: 0 auto;
+			& > ul {
+				margin-top: 10px;
+				display: flex;
+			}
+			& > ul > li {
+				width: 20%;
+				font-size: 0.65rem;
+				font-weight: bold;
+				padding: 20px;
+				margin: 0;
+			}
+			& > ul > li:not(:last-child) {
+				border-right: 1px solid #e5e5e5;
+			}
+		}
 	`;
 	return <SideNav> {children} </SideNav>;
 }

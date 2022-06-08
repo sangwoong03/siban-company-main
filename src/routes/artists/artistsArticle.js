@@ -9,6 +9,13 @@ const ArtistProfile = styled.article`
 	padding: 50px 80px;
 	margin: 0 auto 100px auto;
 	box-sizing: border-box;
+	@media only screen and (max-width: 480px) {
+		display: block;
+		width: 80%;
+		height: auto;
+		padding: 0;
+		margin: 30px auto;
+	}
 `;
 const ImageBox = styled.div`
 	width: 400px;
@@ -18,19 +25,30 @@ const ImageBox = styled.div`
 	align-items: center;
 	& > img {
 	}
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+		margin-right: 0;
+	}
 `;
 const DescBox = styled.div`
 	width: 500px;
 	display: flex;
+	@media only screen and (max-width: 480px) {
+		width: 95%;
+		margin-top: 30px;
+	}
 `;
 const LeftSide = styled.div`
 	text-align: end;
 	font-size: 1.1rem;
 	font-weight: bold;
 	margin-right: 20px;
-	width: 130px;
+	width: 30%;
 	& li {
 		margin: 15px 0;
+	}
+	@media only screen and (max-width: 480px) {
+		font-size: 0.9rem;
 	}
 `;
 const RightSide = styled.div`
@@ -40,6 +58,10 @@ const RightSide = styled.div`
 	}
 	& a:hover {
 		color: rgba(0, 0, 0, 0.3);
+	}
+	@media only screen and (max-width: 480px) {
+		font-size: 0.9rem;
+		flex: 1;
 	}
 `;
 

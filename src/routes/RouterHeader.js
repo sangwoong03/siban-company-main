@@ -11,6 +11,13 @@ const RouterHeader = styled.header`
 	align-items: center;
 	font-size: 2.2rem;
 	font-weight: bold;
+	@media only screen and (max-width: 480px) {
+		max-width: 90%;
+		padding: 30px 0 5px 0;
+		margin: 0 auto;
+		height: auto;
+		font-size: 1rem;
+	}
 `;
 
 function HeaderForRouter({ page }) {

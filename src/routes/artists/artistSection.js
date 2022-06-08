@@ -7,6 +7,12 @@ const ProfileWrapper = styled.section`
 	width: 1200px;
 	height: 600px;
 	overflow: hidden;
+	@media only screen and (max-width: 480px) {
+		width: 95%;
+		height: 100%;
+		overflow: none;
+		margin: 0 auto;
+	}
 `;
 
 const artistInfo = [
