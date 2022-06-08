@@ -19,6 +19,16 @@ const CorpsWrapper = styled.div`
 		margin-top: 20px;
 		font-size: 1rem;
 	}
+	@media only screen and (max-width: 480px) {
+		max-width: 90%;
+		& > h2 {
+			max-width: 100%;
+			font-size: 1.2rem;
+		}
+		& > p {
+			font-size: 0.7rem;
+		}
+	}
 `;
 const CorpsInfo = styled.div`
 	max-width: 860px;
@@ -27,6 +37,12 @@ const CorpsInfo = styled.div`
 	display: flex;
 	justify-content: end;
 	border-bottom: 1px solid #e5e5e5;
+	@media only screen and (max-width: 480px) {
+		max-width: 100%;
+		margin: 20px auto 50px auto;
+		padding: 0;
+		justify-content: space-around;
+	}
 `;
 
 const ShowImg = styled.div`
@@ -39,6 +55,9 @@ const ShowImg = styled.div`
 	&:first-child {
 		margin-right: 20px;
 	}
+	@media only screen and (max-width: 480px) {
+		font-size: 0.8rem;
+	}
 `;
 
 function LocationSibanRouter() {
@@ -46,6 +65,12 @@ function LocationSibanRouter() {
 		width: "860px",
 		padding: "50px",
 		margin: "0 auto",
+		cursor: "pointer",
+	};
+
+	const SmallImgStyle = {
+		width: "90%",
+		margin: "0 auto 50px auto",
 		cursor: "pointer",
 	};
 
@@ -83,7 +108,7 @@ function LocationSibanRouter() {
 						e.target.style.display = "none";
 					}}
 					id="image-box"
-					style={ImgStyle}
+					style={window.innerWidth < 480 ? SmallImgStyle : ImgStyle}
 				></div>
 			</CorpsWrapper>
 		</div>
