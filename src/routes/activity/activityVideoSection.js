@@ -3,6 +3,21 @@ import styled from "styled-components";
 
 const MainSection = styled.section`
 	width: 1200px;
+	& > p {
+		display: none;
+	}
+
+	@media only screen and (max-width: 480px) {
+		width: 90%;
+		margin: 0 auto;
+		overflow: scroll;
+		& > p {
+			display: block;
+			font-size: 0.7rem;
+			text-align: center;
+			color: #2b2b2b;
+		}
+	}
 `;
 const VideoWrapper = styled.div`
 	width: 1000px;
@@ -12,11 +27,17 @@ const VideoWrapper = styled.div`
 	row-gap: 100px;
 	grid-template-rows: repeat(2, 1fr);
 	grid-template-columns: repeat(3, 1fr);
+	@media only screen and (max-width: 480px) {
+		width: 1100px;
+		margin: 0 auto;
+	}
 `;
 const VideoItem = styled.div`
 	width: 300px;
 	height: 250px;
 	margin: auto;
+	@media only screen and (max-width: 480px) {
+	}
 `;
 function ActivityVideoSection() {
 	const youtubeList = [
@@ -60,6 +81,7 @@ function ActivityVideoSection() {
 	return (
 		<>
 			<MainSection>
+				<p> 좌우로 스크롤하여 영상을 볼 수 있습니다. </p>
 				<VideoWrapper>
 					{youtubeList.map((item, index) => (
 						<VideoItem key={index}>
