@@ -9,8 +9,7 @@ const ProfileWrapper = styled.section`
 	overflow: hidden;
 	@media only screen and (max-width: 480px) {
 		width: 95%;
-		height: 100%;
-		overflow: none;
+		height: auto;
 		margin: 0 auto;
 	}
 `;

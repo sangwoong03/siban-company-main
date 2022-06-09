@@ -11,8 +11,8 @@ const ArtistProfile = styled.article`
 	box-sizing: border-box;
 	@media only screen and (max-width: 480px) {
 		display: block;
-		width: 80%;
 		height: auto;
+		width: 80%;
 		padding: 0;
 		margin: 30px auto;
 	}

@@ -8,7 +8,7 @@ function ArtistRouter() {
 	return (
 		<>
 			<HeaderForRouter page={"[시: 반] 아티스트"} />
-			<WrapperForRouter>
+			<WrapperForRouter height={"auto"}>
 				<ArtistMainSection />
 			</WrapperForRouter>
 		</>
