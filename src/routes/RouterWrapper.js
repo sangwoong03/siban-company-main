@@ -12,7 +12,6 @@ function WrapperForRouter({ children, height, mobile_height }) {
 			max-width: 100%;
 			margin: 0 auto 50px auto;
 			display: block;
-			height: auto;
 		}
 	`;
 

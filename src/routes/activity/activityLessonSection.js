@@ -4,9 +4,11 @@ import styled from "styled-components";
 function ActivityLessonSection() {
 	const MainSection = styled.section`
 		width: 1200px;
+		height: 100%;
 		@media only screen and (max-width: 480px) {
 			width: 90%;
-			margin: 0 auto;
+			margin: auto;
+			height: 100vh;
 		}
 	`;
 	const TextWrapper = styled.div`

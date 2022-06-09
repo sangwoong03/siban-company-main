@@ -6,6 +6,7 @@ const MainSection = styled.section`
 	@media only screen and (max-width: 480px) {
 		margin: 0 auto;
 		width: 90%;
+		height: 100vh;
 	}
 `;
 const TextWrapper = styled.div`
