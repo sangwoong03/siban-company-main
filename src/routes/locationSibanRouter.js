@@ -23,7 +23,7 @@ const CorpsWrapper = styled.div`
 		max-width: 90%;
 		& > h2 {
 			max-width: 100%;
-			font-size: 1.2rem;
+			font-size: 1rem;
 		}
 		& > p {
 			font-size: 0.7rem;
@@ -90,8 +90,8 @@ function LocationSibanRouter() {
 	}
 
 	return (
-		<div>
-			<LocationSiban />
+		<>
+			<LocationSiban LocationRouter></LocationSiban>
 			<CorpsWrapper>
 				<h2> 사업자 정보 </h2>
 				<p> 해당 항목을 클릭하시면 사업자등록증명을 확인할 수 있습니다. </p>
@@ -111,7 +111,7 @@ function LocationSibanRouter() {
 					style={window.innerWidth < 480 ? SmallImgStyle : ImgStyle}
 				></div>
 			</CorpsWrapper>
-		</div>
+		</>
 	);
 }
 
