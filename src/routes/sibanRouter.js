@@ -13,6 +13,9 @@ const MainSiban = styled.div`
 	);
 	color: #ffffff;
 	text-align: center;
+	@media only screen and (max-width: 480px) {
+		padding: 50px 0;
+	}
 `;
 const SlogunBox = styled.div`
 	max-width: 1200px;
@@ -21,12 +24,24 @@ const SlogunBox = styled.div`
 	display: flex;
 	align-items: center;
 	position: relative;
+	@media only screen and (max-width: 480px) {
+		max-width: 90%;
+		height: auto;
+		display: block;
+	}
 `;
 
 const ImgBox = styled.div`
 	width: 750px;
 	& > img {
 		width: 100%;
+	}
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+		& > img {
+			margin: 30px auto;
+			width: 90%;
+		}
 	}
 `;
 const TextBox = styled.div`
@@ -43,6 +58,19 @@ const TextBox = styled.div`
 		font-size: 1.15rem;
 		white-space: pre-wrap;
 		line-height: 50px;
+	}
+	@media only screen and (max-width: 480px) {
+		flex: none;
+		margin: 0 auto;
+		height: auto;
+		& > h2 {
+			font-size: 1rem;
+			margin-bottom: 20px;
+		}
+		& > p {
+			font-size: 0.7rem;
+			line-height: 30px;
+		}
 	}
 `;
 
