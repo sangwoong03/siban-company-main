@@ -39,6 +39,30 @@ const Board = styled.div`
 	& ul li:nth-child(3) {
 		width: 55%;
 	}
+
+	@media only screen and (max-width: 480px) {
+		font-size: 1rem;
+		width: 90%;
+		margin: 0 auto;
+		& ul {
+			width: 100%;
+			margin: 0 auto;
+		}
+		& .notice__title {
+			margin-top: 50px;
+			padding: 20px 0;
+			font-size: 0.8rem;
+		}
+		& .notice__list {
+			font-size: 0.6rem;
+		}
+		& ul li:nth-child(1) {
+			width: 10%;
+		}
+		& ul li:nth-child(2) {
+			width: 20%;
+		}
+	}
 `;
 
 function BoardRouter() {
