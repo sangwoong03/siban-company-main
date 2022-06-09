@@ -11,7 +11,8 @@ function TitleBox({ children, ...rest }) {
 		align-items: end;
 		border-bottom: 1px solid #2b2b2b;
 		& > h1 {
-			font-size: 2.5rem;
+			font-size: 2.2rem;
+			font-weight: bold;
 		}
 		& > p {
 			color: #333;
@@ -20,11 +21,12 @@ function TitleBox({ children, ...rest }) {
 			color: #d2d2d2;
 		}
 		${(props) =>
-			props.introduce &&
+			props.loation &&
 			css`
-				& > p:hover a {
-					color: #cc0000;
-					font-weight: bold;
+				@media only screen and (max-width: 480px) {
+					& > h1 {
+						font-size: 1rem;
+					}
 				}
 			`}
 		@media only screen and (max-width: 480px) {

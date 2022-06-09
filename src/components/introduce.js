@@ -35,7 +35,7 @@ function Intro() {
 		<IntroBox>
 			<InnerBox height={"400px"}>
 				<TitleBox introduce>
-					<h1> [시:반] 일상 공유 </h1>
+					<h1> [시: 반] 일상 공유 </h1>
 					<p>
 						<a
 							href="https://www.youtube.com/channel/UCLXAm23QnEYE_WNyjUK3qyQ/featured"

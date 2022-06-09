@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
+import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import InnerBox from "./Inner";
 import TitleBox from "./titleBox";
@@ -11,167 +11,167 @@ import {
 	faCalendar,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const { kakao } = window;
 
-const HomeLocation = styled.section`
-	padding: 100px 0;
-	margin-bottom: 50px;
-	text-align: center;
-`;
+function LocationSiban({ ...rest }) {
+	const { kakao } = window;
 
-const MapWrapper = styled.div`
-	margin: 50px auto;
-	width: 860px;
-	height: 100%;
-	@media only screen and (max-width: 480px) {
-		width: 90%;
-	}
-`;
-const KakaoMap = styled.div`
-	width: 100%;
-	height: 400px;
-	border-radius: 5px;
-	@media only screen and (max-width: 480px) {
-		height: 250px;
-	}
-`;
-const MapInfo = styled.div`
-	width: 100%;
-	& > #info-header {
-		padding: 50px 0px;
-		display: flex;
-		align-items: end;
-		justify-content: space-between;
-		border-bottom: 1px solid #e2e2e2;
-	}
+	const HomeLocation = styled.section`
+		margin-bottom: 50px;
+		text-align: center;
+		}
+	`;
 
-	& > #info-header > #info-group > p {
-		margin-bottom: 10px;
-		font-size: 1rem;
-		text-align: start;
-	}
-
-	& > #info-header > #info-group > h2 {
-		font-size: 1.7rem;
-		font-weight: bold;
-	}
-
-	& > #info-header > #btn-group {
-		width: 30%;
-		display: flex;
-		align-items: center;
-	}
-
-	& > #info-header > #btn-group > a {
-		width: 50%;
-		border: none;
-		outline: none;
-		background: #e2e2e2;
+	const MapWrapper = styled.div`
+		margin: 50px auto;
+		width: 860px;
+		height: 100%;
+		@media only screen and (max-width: 480px) {
+			width: 90%;
+		}
+	`;
+	const KakaoMap = styled.div`
+		width: 100%;
+		height: 400px;
 		border-radius: 5px;
-		padding: 0.75rem;
-		cursor: pointer;
-		&:hover {
-			background: rgba(0, 0, 0, 0.25);
+		@media only screen and (max-width: 480px) {
+			height: 250px;
 		}
-	}
-	& > #info-header > #btn-group > a:first-child {
-		margin-right: 20px;
-	}
-	& > #info-header > div:last-child > a {
-		font-weight: bold;
-		font-size: 1em;
-	}
-
-	& > #detail-wrapper {
-		display: flex;
-		justify-content: space-between;
-	}
-	& > #detail-wrapper > ul:first-child {
-		width: 30%;
-		font-size: 1.2rem;
-	}
-	& > #detail-wrapper > ul > li {
-		padding: 30px 20px;
-		border-bottom: 1px solid #e2e2e2;
-		font-size: 1em;
-		height: 10%;
-	}
-	& > #detail-wrapper > ul:first-child > li {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	& > #detail-wrapper > ul:first-child > li > i {
-		margin-right: 5px;
-	}
-	& > #detail-wrapper > ul:last-child > li:first-child {
-		display: flex;
-		align-items: center;
-		text-align: start;
-	}
-	& > #detail-wrapper > ul:last-child > li > span {
-		background: #fdc81d;
-		color: #fff;
-		padding: 2px;
-		margin-right: 5px;
-		border-radius: 14px;
-	}
-	& > #detail-wrapper > ul:last-child > li:nth-child(2) a:hover {
-		text-decoration: underline;
-		color: #d6d6d6;
-	}
-	& > #detail-wrapper > ul:last-child > li:nth-child(2),
-	& > #detail-wrapper > ul:last-child > li:nth-child(3) {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-	}
-	& > #detail-wrapper > ul:last-child > li:nth-child(3) p {
-		margin-top: 10px;
-	}
-	@media only screen and (max-width: 480px) {
+	`;
+	const MapInfo = styled.div`
+		width: 100%;
 		& > #info-header {
-			padding: 30px 0px;
+			padding: 50px 0px;
+			display: flex;
+			align-items: end;
+			justify-content: space-between;
+			border-bottom: 1px solid #e2e2e2;
 		}
-		& > #info-header > #info-group {
-			width: 50%;
-			margin-right: 25px;
-		}
+
 		& > #info-header > #info-group > p {
 			margin-bottom: 10px;
-			font-size: 0.5rem;
+			font-size: 1rem;
 			text-align: start;
 		}
 
 		& > #info-header > #info-group > h2 {
-			font-size: 1rem;
+			font-size: 1.7rem;
 			font-weight: bold;
 		}
+
 		& > #info-header > #btn-group {
-			width: 50%;
+			width: 30%;
 			display: flex;
 			align-items: center;
 		}
+
 		& > #info-header > #btn-group > a {
-			font-size: 0.7rem;
+			width: 50%;
+			border: none;
+			outline: none;
+			background: #e2e2e2;
+			border-radius: 5px;
+			padding: 0.75rem;
+			cursor: pointer;
+			&:hover {
+				background: rgba(0, 0, 0, 0.25);
+			}
+		}
+		& > #info-header > #btn-group > a:first-child {
+			margin-right: 20px;
+		}
+		& > #info-header > div:last-child > a {
+			font-weight: bold;
+			font-size: 1em;
+		}
+
+		& > #detail-wrapper {
+			display: flex;
+			justify-content: space-between;
 		}
 		& > #detail-wrapper > ul:first-child {
-			width: 40%;
-			font-size: 0.7rem;
+			width: 30%;
+			font-size: 1.2rem;
 		}
 		& > #detail-wrapper > ul > li {
-			padding: 30px 0;
-			font-size: 0.8rem;
-			height: 20%;
+			padding: 30px 20px;
+			border-bottom: 1px solid #e2e2e2;
+			font-size: 1em;
+			height: 10%;
 		}
-		& > #detail-wrapper > ul:last-child > li {
-			padding: 30px 10px;
-			font-size: 0.7rem;
+		& > #detail-wrapper > ul:first-child > li {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
-	}
-`;
+		& > #detail-wrapper > ul:first-child > li > i {
+			margin-right: 5px;
+		}
+		& > #detail-wrapper > ul:last-child > li:first-child {
+			display: flex;
+			align-items: center;
+			text-align: start;
+		}
+		& > #detail-wrapper > ul:last-child > li > span {
+			background: #fdc81d;
+			color: #fff;
+			padding: 2px;
+			margin-right: 5px;
+			border-radius: 14px;
+		}
+		& > #detail-wrapper > ul:last-child > li:nth-child(2) a:hover {
+			text-decoration: underline;
+			color: #d6d6d6;
+		}
+		& > #detail-wrapper > ul:last-child > li:nth-child(2),
+		& > #detail-wrapper > ul:last-child > li:nth-child(3) {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		& > #detail-wrapper > ul:last-child > li:nth-child(3) p {
+			margin-top: 10px;
+		}
+		@media only screen and (max-width: 480px) {
+			& > #info-header {
+				padding: 30px 0px;
+			}
+			& > #info-header > #info-group {
+				width: 50%;
+				margin-right: 25px;
+			}
+			& > #info-header > #info-group > p {
+				margin-bottom: 10px;
+				font-size: 0.5rem;
+				text-align: start;
+			}
 
-function LocationSiban() {
+			& > #info-header > #info-group > h2 {
+				font-size: 1rem;
+				font-weight: bold;
+			}
+			& > #info-header > #btn-group {
+				width: 50%;
+				display: flex;
+				align-items: center;
+			}
+			& > #info-header > #btn-group > a {
+				font-size: 0.7rem;
+			}
+			& > #detail-wrapper > ul:first-child {
+				width: 40%;
+				font-size: 0.7rem;
+			}
+			& > #detail-wrapper > ul > li {
+				padding: 30px 0;
+				font-size: 0.8rem;
+				height: 20%;
+			}
+			& > #detail-wrapper > ul:last-child > li {
+				padding: 30px 10px;
+				font-size: 0.7rem;
+			}
+		}
+	`;
 	const kakaoMap = () => {
 		const sibanLocation = document.querySelector("#map");
 		const options = {
@@ -193,10 +193,43 @@ function LocationSiban() {
 	}, []);
 
 	return (
-		<HomeLocation>
+		<HomeLocation
+			style={
+				window.innerWidth < 480 && window.location.pathname === "/location"
+					? { padding: "0 0 50px 0" }
+					: { padding: "100px 0" }
+			}
+		>
 			<InnerBox height={"auto"}>
-				<TitleBox>
-					<h1> [시:반] 오시는 길 </h1>
+				<TitleBox
+					style={
+						window.innerWidth < 480 && window.location.pathname === "/location"
+							? {
+									borderBottom: "none",
+									width: "90%",
+							  }
+							: {}
+					}
+				>
+					<h1
+						style={
+							window.innerWidth < 480 &&
+							window.location.pathname === "/location"
+								? {
+										maxWidth: "none",
+										width: "100%",
+										fontWeight: "bold",
+										fontSize: "1rem",
+										textAlign: "start",
+										padding: "30px 0 5px 0",
+										height: "auto",
+										borderBottom: "1px solid #e5e5e5",
+								  }
+								: {}
+						}
+					>
+						[시: 반] 오시는 길
+					</h1>
 
 					<p>
 						<Link

@@ -70,7 +70,7 @@ function SlideBox({ children, Name }) {
 		<BoxHome>
 			<InnerBox>
 				<TitleBox>
-					<h1> [시:반] {Name === "Artist" ? "아티스트" : "일상"} </h1>
+					<h1> [시: 반] {Name === "Artist" ? "아티스트" : "일상"} </h1>
 					<p>
 						<Link to={`{link}`}>자세히 보기</Link>
 					</p>
