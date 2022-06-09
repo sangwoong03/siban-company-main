@@ -170,6 +170,10 @@ function LocationSiban({ ...rest }) {
 				padding: 30px 10px;
 				font-size: 0.7rem;
 			}
+			& > #detail-wrapper > ul:last-child > li > span {
+				font-size: 0.2rem;
+				border-radius: 8px;
+			}
 		}
 	`;
 	const kakaoMap = () => {
