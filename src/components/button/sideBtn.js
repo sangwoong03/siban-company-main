@@ -67,10 +67,8 @@ function SideButton() {
 		scroll_position = window.scrollY;
 
 		if (!working) {
-			window.requestAnimationFrame(() => {
-				scrollView(scroll_position);
-				working = false;
-			});
+			scrollView(scroll_position);
+			working = false;
 			working = true;
 		}
 	});
@@ -104,7 +102,11 @@ function SideButton() {
 			</Link>
 			<Button
 				onClick={moveToTop}
-				style={{ fontWeight: "bold", fontSize: "1rem" }}
+				style={
+					window.innerWidth > 480
+						? { fontWeight: "bold", fontSize: "1rem" }
+						: { fontWeight: "bold", fontSize: ".8rem" }
+				}
 			>
 				Top
 			</Button>

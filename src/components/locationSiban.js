@@ -171,7 +171,7 @@ function LocationSiban({ ...rest }) {
 				font-size: 0.7rem;
 			}
 			& > #detail-wrapper > ul:last-child > li > span {
-				font-size: 0.2rem;
+				font-size: 0.7rem;
 				border-radius: 8px;
 			}
 		}
