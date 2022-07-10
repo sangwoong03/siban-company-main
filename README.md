@@ -1,52 +1,53 @@
-## SibanCompany resoponsive app renewal
+## 시반컴퍼니 메인 웹사이트
 
 ---
 
-[web site link](http://siban-company.netlify.app)
+### 1. 웹 사이트 주소 : https://siban-company.netlify.app
 
 <br>
 
-1. Layout ()
+### 2. 프론트엔드 스택
 
-- html (meta tag)
-- src images, fonts, whole layout ... from orginal version
-- Layout
-  - header (logo, nav, link)
-  - nav (including main & board)
-    - board for communication with users
-    - using Django & MySQL for board router pages
-      - after `wecode back-end session` I added this function.. until that time I have to learn about Python
-  - main
-    - poster
-    - artists
-    - acts
-    - map (Naver or Google api)
-  - footer (logo / social media link / information of company)
+- React.js
+- Styled-componenets
 
-2. Styled-components (zb 인강 복습)
+<br>
 
-- style 초기화
-- MediaQuery 추가 (22. 06. 06~)
+### 3. 백엔드 스택 (예정)
 
-```
-  npm i styled-reset
-```
+- Python(Django)
+- MySQL (Database)
+- AWS (To deploy server)
 
-3. 상태 관리 (차후 변경)
+<br>
 
-- react-rotuer-dom
+### 4. 기능
 
-4. 데이터베이스
+1. 메인 페이지
 
-- MySQL 사용
-- 게시판 게시글/유저 정보 사용
-- Django 프레임워크 사용
+- 배우, 공연 정보 슬라이드 기능
+- iframe 태그를 통해 유튜브 영상 송출
+- 카카오 맵 API를 통해 사무실 위치 구현 (길찾기, 지도는 네이버 지도로 이동)
 
-5. 배포 사이트 (AWS로 변경 예정)
+2. 네비게이션 바
 
-- [netlify](https://www.netlify.com/)
-- 배포 파일 / 명령어
+- 로고 클릭 시 메인페이지 이동
+- 인스타그램, 유튜브 외부 url 이동
+- router를 통한 컴포넌트 이동
 
-```
-npm run build
-```
+3. 게시판 기능 구현 예정
+
+- 간편 로그인 기능을 통해 회원 별 게시글 구분
+- python(django)를 활용한 백엔드 서버 구축
+- MySQL 데이터베이스 구축 및 AWS 연동
+- S3를 활용하여 게시글 이미지 첨부
+
+<br>
+
+### 5. 수정사항
+
+1. 컴포넌트 분리 및 리팩토링
+
+2. 데이터베이스 모델링
+
+- 목(Mock) 데이터 → DB 이전
