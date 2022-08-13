@@ -1,6 +1,9 @@
 ## 시반컴퍼니 메인 웹사이트
 
----
+SbianCompany의 메인 웹사이트 개발 목적 레포지토리입니다.
+
+아래 링크에서 실제 배포 및 운영 중에 있으며, [백엔드 레포지토리](https://github.com/sangwoong03/siban-compnay-django) 개발 예정에 있습니다.
+
 
 ### 1. 웹 사이트 주소 : https://siban-company.netlify.app
 
