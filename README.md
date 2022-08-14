@@ -18,9 +18,10 @@ SbianCompany의 메인 웹사이트 개발 목적 레포지토리입니다.
 
 ### 3. 백엔드 스택 (예정)
 
-- Python(Django)
+- Python(Django) - Public
+- Javascript(Node) - Admin
 - MySQL (Database)
-- AWS (To deploy server)
+- AWS (To deploy API server)
 
 <br>
 
