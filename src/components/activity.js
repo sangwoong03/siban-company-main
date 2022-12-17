@@ -50,6 +50,12 @@ const ActivityTiles = styled.li`
 
 const activityItems = [
 	{
+		title: "D : DAY (스튜디오SK)",
+		brief: "2022년 12월 27일 ~ 23년 1월 1일",
+		src: "../assets/dday-poster-1.jpeg",
+		schedule: true,
+	},
+	{
 		title: "그대 내곁에 (강릉)",
 		brief: "2022년 5월 14일 ~ 15일",
 		src: "../assets/siban_activity_Gangneung.jpg",

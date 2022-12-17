@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import InnerBox from "./Inner";
 
@@ -52,7 +52,7 @@ const Cover = styled.div`
 function Siban() {
 	return (
 		<HomeSiban>
-			<InnerBox height={"650px"} siban>
+			<InnerBox height={"550px"} siban>
 				<Cover>
 					<div>
 						<p> 예 술 창 작 집 단</p>
