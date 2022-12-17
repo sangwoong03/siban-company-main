@@ -14,9 +14,16 @@ const MainSiban = styled.div`
 	color: #ffffff;
 	text-align: center;
 	@media only screen and (max-width: 480px) {
-		padding: 50px 0;
+		padding: 0;
 	}
 `;
+const ImageBox = styled.div`
+	width: 50%;
+	margin: 0 auto;
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+	}
+`
 const SlogunBox = styled.div`
 	max-width: 1200px;
 	height: 600px;
@@ -105,7 +112,10 @@ function SibanRouter() {
 	return (
 		<div>
 			<MainSiban>
-				{sibanIntroList.map((list, index) => (
+				<ImageBox>
+					<img src="../assets/about-siban.jpeg" alt="" />
+				</ImageBox>
+				{/* {sibanIntroList.map((list, index) => (
 					<SlogunBox
 						key={index}
 						style={
@@ -128,7 +138,7 @@ function SibanRouter() {
 							<p>{list.desc}</p>
 						</TextBox>
 					</SlogunBox>
-				))}
+				))} */}
 			</MainSiban>
 		</div>
 	);
