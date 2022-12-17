@@ -29,6 +29,34 @@ const DescriptionBox = styled.div`
 	flex: 1;
 	display: flex;
 `;
+const ButtonBox = styled.div`
+	margin-top: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	& > a {
+		width: 35%;
+		text-align: center;
+		font-size: 1.2rem;
+		background: white;
+		padding: 10px 15px;
+		border-radius: 5px;
+		background: rgba(0, 0, 0, 0.1);
+	}
+	& > a:hover {
+		background: rgba(0, 0, 0, 0.2);
+	}
+	@media only screen and (max-width: 480px) {
+		display: flex;
+		flex-direction: column;
+		& > a {
+			width: auto;
+			text-align: center;
+			font-size: 0.7rem;
+			margin-bottom: 20px;
+		}
+	}
+`;
 const LeftList = styled.ul`
 	width: 10%;
 	font-size: 1.2rem;
@@ -181,24 +209,24 @@ function ActivityMainSection() {
 									이에 이 모임은 새로운 국면을 맞이하게 되는데..
 								</p>
 							</li>
-							{/* <li>
+							<li>
 								<ButtonBox>
 									<a
-										href="https://booking.naver.com/booking/12/bizes/686227"
+										href="https://booking.naver.com/booking/5/bizes/817380"
 										target="_blank"
 										rel="noreferrer"
 									>
 										네이버 예약
 									</a>
 									<a
-										href="https://map.naver.com/v5/entry/place/1133394578?c=14347808.2782850,4544333.2361852,15,0,0,0,dh"
+										href="https://map.naver.com/v5/entry/place/37232850?c=14136789.7661805,4520812.9856529,15,0,0,0,dh"
 										target="_blank"
 										rel="noreferrer"
 									>
 										공연장 위치
 									</a>
 								</ButtonBox>
-							</li> */}
+							</li>
 						</RightList>
 					</DescriptionBox>
 				</BasicInfo>
