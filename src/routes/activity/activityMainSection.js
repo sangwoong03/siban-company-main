@@ -77,7 +77,7 @@ function ActivityMainSection() {
 	const [overflow, setOverflow] = useState("hidden");
 	const [height, setHeight] = useState("1000px");
 	const [gradient, setGradient] = useState(
-		"linear-gradient(to top, #fff 10%, rgba(0, 0, 0, 0.05))",
+		"linear-gradient(to top, #fff 7%, rgba(0, 0, 0, 0.05))",
 	);
 	const [text, setText] = useState("자세히 보기");
 
@@ -143,7 +143,7 @@ function ActivityMainSection() {
 			<MainSection className="activitiy--main--section">
 				<BasicInfo>
 					<PosterBox>
-						<img src="../assets/poster_main.jpg" alt="main-poster" />
+						<img src="../assets/dday-poster-1.jpeg" alt="main-poster" />
 					</PosterBox>
 					<DescriptionBox>
 						<LeftList>
@@ -156,30 +156,29 @@ function ActivityMainSection() {
 						</LeftList>
 						<RightList>
 							<li>
-								그대 내 곁에 <span style={{ color: "red" }}> (공연 종료) </span>
+								D : DAY (디 : 데이) <span style={{ color: "red" }}> (공연 예정) </span>
 							</li>
-							<li> 드라마극 (80분) </li>
-							<li> 2022-05-14.(토) ~ 2022-05-15.(일) </li>
+							<li> 드라마극 (75분) </li>
+							<li> 2022.12.27.(화) ~ 2023.01.01.(일) </li>
 							<ul
 								className="right-list--time"
 								style={{ height: "50px", marginBottom: "20px" }}
 							>
-								<li style={{ marginBottom: "10px" }}>토요일 19시</li>
-								<li> 일요일 15시, 19시 </li>
+								<li style={{ marginBottom: "10px" }}> 화 ~ 금 19시 30분</li>
+								<li> 토, 일 15시 </li>
 							</ul>
 							<ul
 								className="right-list--place"
 								style={{ height: "50px", marginBottom: "20px" }}
 							>
-								<li style={{ marginBottom: "10px" }}>작은공연장 단</li>
-								<li>강원도 강릉시 경강로2046번길 5</li>
+								<li style={{ marginBottom: "10px" }}>스튜디오SK</li>
+								<li>서울특별시 종로구 명륜3가 122-2</li>
 							</ul>
 							<li>
 								<p style={{ lineHeight: "1.7rem" }}>
-									저승으로 가게 된 만수. 세명의 저승사자들의 안내에 따라
-									저승에서의 마지막 여정을 떠나려는데.. 이승에서의 못다한 미련
-									때문에 쉽게 발걸음을 떼지 못한다. 이에 저승사자들은 만수가
-									가지고 있는 미련이 어떤 미련인지 살펴보기로 한다.
+									다섯 명의 사람들이 자살 채팅방을 통해 한 옥상에 모이게 된다.
+									그러나 죽음 앞에서 두려움을 느낀 그들은 자살시도에 머뭇거리게 된다.
+									이에 이 모임은 새로운 국면을 맞이하게 되는데..
 								</p>
 							</li>
 							{/* <li>
@@ -204,7 +203,7 @@ function ActivityMainSection() {
 					</DescriptionBox>
 				</BasicInfo>
 				<PosterSub>
-					<img src="../assets/poster_sub.jpg" alt="sub-poster" />
+					<img src="../assets/dday-whole.jpeg" alt="sub-poster" />
 				</PosterSub>
 				<MoreInfoBtnBox>
 					<span onClick={showPoster}> {text} </span>

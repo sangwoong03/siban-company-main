@@ -6,7 +6,7 @@ const ArtistProfile = styled.article`
 	width: 100%;
 	height: 600px;
 	display: flex;
-	padding: 50px 80px;
+	padding: 30px 80px;
 	margin: 0 auto 100px auto;
 	box-sizing: border-box;
 	@media only screen and (max-width: 480px) {
