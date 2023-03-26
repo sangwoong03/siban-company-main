@@ -53,7 +53,7 @@ const activityItems = [
 		title: "D : DAY (스튜디오SK)",
 		brief: "2022년 12월 27일 ~ 23년 1월 1일",
 		src: "../assets/dday-poster-1.jpeg",
-		schedule: true,
+		schedule: false,
 	},
 	{
 		title: "그대 내곁에 (강릉)",
