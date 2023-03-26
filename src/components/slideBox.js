@@ -72,7 +72,7 @@ function SlideBox({ children, Name }) {
 				<TitleBox>
 					<h1> [시: 반] {Name === "Artist" ? "아티스트" : "일상"} </h1>
 					<p>
-						<Link to={`{link}`}>자세히 보기</Link>
+						<Link to={Name === "Artist" ? "/artists" : "/activity"}>자세히 보기</Link>
 					</p>
 				</TitleBox>
 				<BoxMain>
