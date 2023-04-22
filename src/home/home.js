@@ -7,16 +7,16 @@ import Intro from "../components/introduce";
 import SideButton from "../components/button/sideBtn";
 
 function Home() {
-	return (
-		<Fragment>
-			<Siban />
-			<Artist />
-			<Activity />
-			<Intro />
-			<LocationSiban />
-			<SideButton />
-		</Fragment>
-	);
+  return (
+    <Fragment>
+      <Siban />
+      <Artist />
+      <Activity />
+      <Intro />
+      <LocationSiban />
+      <SideButton />
+    </Fragment>
+  );
 }
 
 export default Home;
