@@ -8,44 +8,44 @@ import WrapperForRouter from "./RouterWrapper";
 import SideNavForRouter from "./RouterSideNav";
 
 function ActivityRouter() {
-	const [renderSection, setRenderSection] = useState(<ActivityMainSection />);
-	const [subTitle, setSubTitle] = useState("공연");
-	const ActivityNavList = ["공연", "영상", "레슨", "일상"];
-	const sectionList = [
-		<ActivityMainSection />,
-		<ActivityVideoSection />,
-		<ActivityLessonSection />,
-		<ActivityDailySection />,
-	];
+  const [renderSection, setRenderSection] = useState(<ActivityMainSection />);
+  const [subTitle, setSubTitle] = useState("공연");
+  const ActivityNavList = ["공연", "영상", "레슨", "일상"];
+  const sectionList = [
+    <ActivityMainSection />,
+    <ActivityVideoSection />,
+    <ActivityLessonSection />,
+    <ActivityDailySection />,
+  ];
 
-	const changeRender = (e) => {
-		const listId = parseInt(e.target.id);
+  const changeRender = (e) => {
+    const listId = parseInt(e.target.id);
 
-		for (let i = 0; i < ActivityNavList.length; i++) {
-			if (listId === i) {
-				setRenderSection(sectionList[i]);
-				setSubTitle(ActivityNavList[i]);
-			}
-		}
-	};
-	return (
-		<>
-			<HeaderForRouter page={`[시: 반] 일 상 - ${subTitle}`} />
+    for (let i = 0; i < ActivityNavList.length; i++) {
+      if (listId === i) {
+        setRenderSection(sectionList[i]);
+        setSubTitle(ActivityNavList[i]);
+      }
+    }
+  };
+  return (
+    <>
+      <HeaderForRouter page={`[시: 반] 일 상 - ${subTitle}`} />
 
-			<WrapperForRouter height={"auto"}>
-				<SideNavForRouter>
-					<ul>
-						{ActivityNavList.map((item, index) => (
-							<li key={index} id={index} onClick={changeRender}>
-								{item}
-							</li>
-						))}
-					</ul>
-				</SideNavForRouter>
-				{renderSection}
-			</WrapperForRouter>
-		</>
-	);
+      <WrapperForRouter height={"auto"}>
+        <SideNavForRouter>
+          <ul>
+            {ActivityNavList.map((item, index) => (
+              <li key={index} id={index} onClick={changeRender}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </SideNavForRouter>
+        {renderSection}
+      </WrapperForRouter>
+    </>
+  );
 }
 
 export default ActivityRouter;

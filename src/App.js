@@ -35,21 +35,21 @@ const GlobalStlye = createGlobalStyle`
 `;
 
 function App() {
-	return (
-		<>
-			<GlobalStlye />
-			<Header />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/siban" element={<SibanRouter />} />
-				<Route path="/activity" element={<ActivityRouter />} />
-				<Route path="/artists" element={<ArtistRouter />} />
-				<Route path="/location" element={<LocationSibanRouter />} />
-				<Route path="/board" element={<BoardRouter />} />
-			</Routes>
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <GlobalStlye />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/siban" element={<SibanRouter />} />
+        <Route path="/activity" element={<ActivityRouter />} />
+        <Route path="/artists" element={<ArtistRouter />} />
+        <Route path="/location" element={<LocationSibanRouter />} />
+        <Route path="/board" element={<BoardRouter />} />
+      </Routes>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
