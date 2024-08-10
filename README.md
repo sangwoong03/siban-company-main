@@ -7,7 +7,7 @@
 
 ### ✔️ Frontend
 
-실제 배포에 사용되었던 이전 React 코드를 포함합니다.
+실제 배포에 사용되었던 이전 React & JavaScript 코드를 포함합니다.
 
 ### ✔️ Backend
 
