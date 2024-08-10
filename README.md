@@ -15,4 +15,4 @@ Typescript와 Express 기반 API 코드 템플릿을 포함합니다.
 
 ### ✔️ Database
 
-데이터베이스 구축에 필요한 코드를 포함합니다.
+yoyo migration 툴을 활용하여 데이터베이스 구축에 필요한 코드를 포함합니다.
